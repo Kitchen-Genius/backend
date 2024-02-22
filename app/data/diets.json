@@ -1,0 +1,14 @@
+{
+    "diets": [
+      "gluten-free",
+      "vegetarian",
+      "lacto-vegetarian",
+      "ovo-vegetarian",
+      "vegan",
+      "pescetarian",
+      "paleo",
+      "primal",
+      "low FODMAP",
+      "whole30"
+    ]
+  }

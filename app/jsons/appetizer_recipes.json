@@ -1,0 +1,157 @@
+{
+    "results": [
+        {
+            "vegetarian": true,
+            "vegan": true,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 3,
+            "gaps": "no",
+            "preparationMinutes": -1,
+            "cookingMinutes": -1,
+            "aggregateLikes": 161,
+            "healthScore": 40,
+            "creditsText": "Lisa's Vegetarian Kitchen",
+            "license": "CC BY 2.5 CA",
+            "sourceName": "Food and Spice",
+            "pricePerServing": 43.68,
+            "id": 716195,
+            "title": "Spicy Indian-Style Hummus",
+            "readyInMinutes": 45,
+            "servings": 12,
+            "sourceUrl": "http://foodandspice.blogspot.com/2012/07/spicy-hummus-indian-style.html",
+            "image": "https://spoonacular.com/recipeImages/716195-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "You can never have too many middl eastern recipes, so give Spicy Indian-Style Hummus a try. For <b>44 cents per serving</b>, you get a hor d'oeuvre that serves 12. Watching your figure? This gluten free, dairy free, lacto ovo vegetarian, and vegan recipe has <b>134 calories</b>, <b>5g of protein</b>, and <b>6g of fat</b> per serving. This recipe from foodandspice.blogspot.com has 161 fans. From preparation to the plate, this recipe takes about <b>45 minutes</b>. Head to the store and pick up turmeric, chilies, sea salt, and a few other things to make it today. With a spoonacular <b>score of 96%</b>, this dish is outstanding. Users who liked this recipe also liked <a href=\"https://spoonacular.com/recipes/indian-style-spicy-couscous-647863\">Indian Style Spicy Couscous</a>, <a href=\"https://spoonacular.com/recipes/red-onion-indian-spiced-hummus-217684\">Red onion & Indian-spiced hummus</a>, and <a href=\"https://spoonacular.com/recipes/indian-style-coleslaw-603940\">Indian-Style Coleslaw</a>.",
+            "cuisines": [
+                "Middle Eastern"
+            ],
+            "dishTypes": [
+                "antipasti",
+                "condiment",
+                "starter",
+                "snack",
+                "appetizer",
+                "dip",
+                "antipasto",
+                "hor d'oeuvre",
+                "spread"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free",
+                "lacto ovo vegetarian",
+                "vegan"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Rinse the chickpeas and soak for 8 hours or overnight covered in several inches of water with a little yogurt whey or lemon juice added.",
+                            "ingredients": [
+                                {
+                                    "id": 9152,
+                                    "name": "lemon juice",
+                                    "localizedName": "lemon juice",
+                                    "image": "lemon-juice.jpg"
+                                },
+                                {
+                                    "id": 16057,
+                                    "name": "chickpeas",
+                                    "localizedName": "chickpeas",
+                                    "image": "chickpeas.png"
+                                },
+                                {
+                                    "id": 1116,
+                                    "name": "yogurt",
+                                    "localizedName": "yogurt",
+                                    "image": "plain-yogurt.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 480,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 2,
+                            "step": "Drain and rinse, then transfer to a large saucepan.  Cover with several inches of fresh water, bring to a boil, reduce the heat to medium-low and cover.  Simmer for 1 to 1 1/2 hours or until the beans are buttery soft.",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "beans",
+                                    "localizedName": "beans",
+                                    "image": "kidney-beans.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404669,
+                                    "name": "sauce pan",
+                                    "localizedName": "sauce pan",
+                                    "image": "sauce-pan.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 120,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 3,
+                            "step": "Drain.In a food processor, combine all of the ingredients and process until you have a thick, smooth paste. You may need to add extra olive oil or a bit of water if you want a thinner paste. Makes 3 cups, nutrition information is based on 1/4 cup serving.",
+                            "ingredients": [
+                                {
+                                    "id": 4053,
+                                    "name": "olive oil",
+                                    "localizedName": "olive oil",
+                                    "image": "olive-oil.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404771,
+                                    "name": "food processor",
+                                    "localizedName": "food processor",
+                                    "image": "food-processor.png"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "spoonacularScore": 96.61723327636719,
+            "spoonacularSourceUrl": "https://spoonacular.com/spicy-indian-style-hummus-716195"
+        }
+    ],
+    "offset": 0,
+    "number": 1,
+    "totalResults": 17
+}

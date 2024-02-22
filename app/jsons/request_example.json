@@ -1,0 +1,31 @@
+[
+    {
+        "High_protein": true,
+        "Low_calories": true,
+        "Vegetarian": true,
+        "dairyFree": true,
+        "brakefast": false,
+        "lunch": true,
+        "dinner": false,
+        "dessert": false,
+        "levelOfCooking": "Expert",
+        "ingridients": [
+            {
+                "id": 6979,
+                "name": "adobo sauce"
+            },
+            {
+                "id": 1009016,
+                "name": "apple cider"
+            },
+            {
+                "id": 11080,
+                "name": "beets"
+            },
+            {
+                "id": 19074,
+                "name": "caramels"
+            }
+        ]
+    }
+]
