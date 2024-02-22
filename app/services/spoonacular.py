@@ -72,7 +72,7 @@ def get_analyzed_recipe_instructions(id, stepBreakdown=True):
     
     return data
 
-async def process_and_save_recipes(diet, includeIngredients, type, intolerances, instructionsRequired=True, number=1):
+async def process_and_save_recipes(diet, includeIngredients, type="", intolerances="", instructionsRequired=True, number=10):
     # Fetch recipes based on criteria
     recipes_data = await search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired, number, addRecipeInformation=True)
     processed_recipes = []
