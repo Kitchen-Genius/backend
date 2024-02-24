@@ -1,4 +1,6 @@
 # recipe_processing.py
+from app.services.spoonacular import search_recipes, fetch_recipe_ingredients
+from app.utils.file_utils import save_data_locally
 from typing import List, Dict
 
 def prepare_recipe_search_criteria(criteria_json: List[Dict]):
@@ -40,3 +42,20 @@ def process_recipe(recipe_json, ingredients_json):
     }
     
     return processed_recipe
+
+async def process_and_save_recipes(diet, includeIngredients, type="", intolerances="", instructionsRequired=True, number=10):
+    # Fetch recipes based on criteria
+    recipes_data = await search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired, number, addRecipeInformation=True)
+    processed_recipes = []
+
+    # Loop through each recipe, fetch ingredients, and process the recipe
+    for recipe in recipes_data.get("results", []):
+        recipe_id = recipe.get("id")
+        ingredients_data = await fetch_recipe_ingredients(recipe_id)
+        processed_recipe = process_recipe({"results": [recipe]}, ingredients_data)
+        processed_recipes.append(processed_recipe)
+    
+    # Save the processed recipes locally
+    save_data_locally(processed_recipes, f"{type}_processed_recipes.json")
+    
+    return processed_recipes
