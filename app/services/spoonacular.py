@@ -3,7 +3,6 @@ import requests
 import os
 from dotenv import load_dotenv
 from app.utils.file_utils import save_data_locally
-from app.services.recipe_processing import process_recipe
 from app.utils.validations import validate_params
 
 
