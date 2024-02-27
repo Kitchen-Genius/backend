@@ -25,9 +25,11 @@ async def get_processed_recipes(
     diet: str = Depends(validate_diet), 
     includeIngredients: str = None, 
     type: str = Depends(validate_type), 
-    intolerances: str = Depends(validate_intolerances)
+    intolerances: str = Depends(validate_intolerances),
+    instructionsRequired: bool = True,
+    number: int = 1
 ):
-    processed_recipes = await spoonacular_service(diet, includeIngredients, type, intolerances)
+    processed_recipes = await process_and_save_recipes(diet, includeIngredients, type, intolerances, instructionsRequired, number)
     if "error" in processed_recipes:
         raise HTTPException(status_code=400, detail=processed_recipes["error"])
     return processed_recipes
