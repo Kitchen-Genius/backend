@@ -12,10 +12,11 @@ async def search_recipes(
     includeIngredients: str = None, 
     type: str = Depends(validate_type), 
     intolerances: str = Depends(validate_intolerances), 
+    addRecipeInformation: bool = True,
     instructionsRequired: bool = True, 
     number: int = 1
 ):
-    data = await spoonacular_service.search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired, number)
+    data = await spoonacular_service.search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired, number, addRecipeInformation )
     if "error" in data:
         raise HTTPException(status_code=400, detail=data["error"])
     return data

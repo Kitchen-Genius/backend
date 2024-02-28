@@ -24,7 +24,7 @@ async def search_recipes(diet, includeIngredients, type, intolerances, instructi
         "intolerances": intolerances,
         "instructionsRequired": instructionsRequired,
         "number": number,
-        "addRecipeInformation": addRecipeInformation
+        "addRecipeInformation": addRecipeInformation,
     }
 
     async with httpx.AsyncClient() as client:
@@ -64,3 +64,12 @@ def get_analyzed_recipe_instructions(id, stepBreakdown=True):
     
     return data
 
+async def fetch_recipe_nutrition(recipe_id: int):
+    url = f"https://api.spoonacular.com/recipes/{recipe_id}/nutritionWidget.json"
+    params = {"apiKey": API_KEY}
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url, params=params)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return {"error": "Failed to fetch recipe nutrition", "status_code": response.status_code}
