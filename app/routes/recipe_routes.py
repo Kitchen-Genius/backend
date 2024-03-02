@@ -113,17 +113,17 @@ async def process_recipes_criteria(criteria: ProcessRecipesCriteria = Body(...))
 
 
 
-@router.post("/atlas/save_recipe")
-async def save_recipe(recipe: RecipeCriteria = Body(...)):
-    try:
-        # collection.insert_one(
-        #     {"User": recipe["user"]},
-        #     {"$set": {"recipeCollectio": recipe }}
-        # )
-        result = collection.insert_one(recipe)
-        return {"message": "Recipe saved successfully", "id": str(result.inserted_id)}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+# @router.post("/atlas/save_recipe")
+# async def save_recipe(recipe: RecipeCriteria = Body(...)):
+#     try:
+#         # collection.insert_one(
+#         #     {"User": recipe["user"]},
+#         #     {"$set": {"recipeCollectio": recipe }}
+#         # )
+#         result = collection.insert_one(recipe)
+#         return {"message": "Recipe saved successfully", "id": str(result.inserted_id)}
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e))
     
 
 @router.get("/atlas/get_recipes")
