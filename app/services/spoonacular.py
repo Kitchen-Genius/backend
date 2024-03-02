@@ -11,20 +11,31 @@ load_dotenv()
 API_KEY = os.getenv("SPOONACULAR_API_KEY")
 
 ## TODO allow searching with empty diet, type and intolerances: ##
-async def search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired=True, number=1):
-    if not validate_params('diets', diet, 'diets') or not validate_params('meal_types', type, 'meal_types') or not validate_params('intolerances', intolerances, 'intolerances'):
-        return {"error": "Invalid diet, type, or intolerance parameter"}
+async def search_recipes(diet='', includeIngredients='', type='', intolerances='', instructionsRequired=True, number=1, addRecipeInformation=True, maxReadyTime=20):
+    if diet and not validate_params('diets', diet, 'diets'):
+        return {"error": "Invalid diet parameter"}
+    if type and not validate_params('meal_types', type, 'meal_types'):
+        return {"error": "Invalid type parameter"}
+    if intolerances and not validate_params('intolerances', intolerances, 'intolerances'):
+        return {"error": "Invalid intolerances parameter"}
 
     url = "https://api.spoonacular.com/recipes/complexSearch"
     query = {
         "apiKey": API_KEY,
-        "diet": diet,
-        "includeIngredients": includeIngredients,
-        "type": type,
-        "intolerances": intolerances,
         "instructionsRequired": instructionsRequired,
         "number": number,
+        "addRecipeInformation": addRecipeInformation,
+        "maxReadyTime": maxReadyTime,
     }
+    # Conditionally add parameters if they are not empty
+    if diet != "":
+        query["diet"] = diet
+    if includeIngredients:
+        query["includeIngredients"] = includeIngredients
+    if type != "":
+        query["type"] = type
+    if intolerances != "":
+        query["intolerances"] = intolerances
 
     async with httpx.AsyncClient() as client:
         response = await client.get(url, params=query)

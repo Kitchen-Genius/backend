@@ -1,0 +1,554 @@
+{
+    "results": [
+        {
+            "vegetarian": true,
+            "vegan": true,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": true,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 23,
+            "gaps": "no",
+            "preparationMinutes": -1,
+            "cookingMinutes": -1,
+            "aggregateLikes": 35,
+            "healthScore": 100,
+            "creditsText": "Lisa's Vegetarian Kitchen",
+            "license": "CC BY 2.5 CA",
+            "sourceName": "Food and Spice",
+            "pricePerServing": 161.03,
+            "id": 766453,
+            "title": "Hummus and Za'atar",
+            "readyInMinutes": 45,
+            "servings": 4,
+            "sourceUrl": "http://foodandspice.blogspot.com/2016/03/hummus-with-zaatar.html",
+            "image": "https://spoonacular.com/recipeImages/766453-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "You can never have too many middl eastern recipes, so give Hummus and Za'atar a try. This recipe serves 4. One portion of this dish contains about <b>34g of protein</b>, <b>31g of fat</b>, and a total of <b>778 calories</b>. For <b>$1.61 per serving</b>, this recipe <b>covers 44%</b> of your daily requirements of vitamins and minerals. If you have chickpeas, olive oil, sea salt, and a few other ingredients on hand, you can make it. It works best as a marinade, and is done in about <b>45 minutes</b>. It is a good option if you're following a <b>gluten free, dairy free, lacto ovo vegetarian, and vegan</b> diet. 35 people have made this recipe and would make it again. It is brought to you by foodandspice.blogspot.com. Overall, this recipe earns a <b>great spoonacular score of 98%</b>. <a href=\"https://spoonacular.com/recipes/chopped-hummus-dip-with-zaatar-180958\">Chopped Hummus Dip with Za'atar</a>, <a href=\"https://spoonacular.com/recipes/mediterranean-hummus-toast-with-zaatar-1067472\">Mediterranean Hummus Toast with Za\u2019atar</a>, and <a href=\"https://spoonacular.com/recipes/hummus-deviled-eggs-with-zaatar-exercise-challenge-1195539\">Hummus Deviled Eggs with Za\u2019atar {Exercise Challenge}</a> are very similar to this recipe.",
+            "cuisines": [
+                "Middle Eastern"
+            ],
+            "dishTypes": [
+                "seasoning",
+                "marinade"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free",
+                "lacto ovo vegetarian",
+                "vegan"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Rinse the chickpeas and soak for 8 hours or overnight in several inches of water.",
+                            "ingredients": [
+                                {
+                                    "id": 16057,
+                                    "name": "chickpeas",
+                                    "localizedName": "chickpeas",
+                                    "image": "chickpeas.png"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 480,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 2,
+                            "step": "Drain and rinse, then transfer to a medium saucepan and cover with fresh water. Bring to a boil, reduce heat to medium-low, cover, and simmer for 1 to 1 1/2 hours or until soft.",
+                            "ingredients": [
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404669,
+                                    "name": "sauce pan",
+                                    "localizedName": "sauce pan",
+                                    "image": "sauce-pan.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 120,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 3,
+                            "step": "Drain, reserving the cooking liquid. (If using canned chickpeas, rinse thoroughly.)Meanwhile, toast the pine nuts in a dry unoiled skillet or saucepan over medium-low heat, tossing or stirring frequently, for 10 minutes or until lightly browned.",
+                            "ingredients": [
+                                {
+                                    "id": 16058,
+                                    "name": "canned chickpeas",
+                                    "localizedName": "canned chickpeas",
+                                    "image": "chickpeas.png"
+                                },
+                                {
+                                    "id": 12147,
+                                    "name": "pine nuts",
+                                    "localizedName": "pine nuts",
+                                    "image": "pine-nuts.png"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "sandwich bread",
+                                    "localizedName": "sandwich bread",
+                                    "image": "white-bread.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404669,
+                                    "name": "sauce pan",
+                                    "localizedName": "sauce pan",
+                                    "image": "sauce-pan.jpg"
+                                },
+                                {
+                                    "id": 404645,
+                                    "name": "frying pan",
+                                    "localizedName": "frying pan",
+                                    "image": "pan.png"
+                                }
+                            ],
+                            "length": {
+                                "number": 10,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 4,
+                            "step": "Transfer the chickpeas to a food processor and add the pine nuts, 2 tablespoons of olive oil, 1/4 cup of the reserved chickpea cooking liquid (or water if using canned chicpeas), the tahini, garlic, lemon juice and salt. Process until smooth, adding more of the reserved chickpea cooking liquid or water as necessary to reach a light creamy consistency. Taste for seasoning and add more salt or lemon juice as desired.",
+                            "ingredients": [
+                                {
+                                    "id": 9152,
+                                    "name": "lemon juice",
+                                    "localizedName": "lemon juice",
+                                    "image": "lemon-juice.jpg"
+                                },
+                                {
+                                    "id": 16057,
+                                    "name": "chickpeas",
+                                    "localizedName": "chickpeas",
+                                    "image": "chickpeas.png"
+                                },
+                                {
+                                    "id": 4053,
+                                    "name": "olive oil",
+                                    "localizedName": "olive oil",
+                                    "image": "olive-oil.jpg"
+                                },
+                                {
+                                    "id": 12147,
+                                    "name": "pine nuts",
+                                    "localizedName": "pine nuts",
+                                    "image": "pine-nuts.png"
+                                },
+                                {
+                                    "id": 1042027,
+                                    "name": "seasoning",
+                                    "localizedName": "seasoning",
+                                    "image": "seasoning.png"
+                                },
+                                {
+                                    "id": 11215,
+                                    "name": "garlic",
+                                    "localizedName": "garlic",
+                                    "image": "garlic.png"
+                                },
+                                {
+                                    "id": 12698,
+                                    "name": "tahini",
+                                    "localizedName": "tahini",
+                                    "image": "tahini-paste.png"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                },
+                                {
+                                    "id": 2047,
+                                    "name": "salt",
+                                    "localizedName": "salt",
+                                    "image": "salt.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404771,
+                                    "name": "food processor",
+                                    "localizedName": "food processor",
+                                    "image": "food-processor.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 5,
+                            "step": "Transfer the hummus to a shallow bowl and drizzle with olive oil.",
+                            "ingredients": [
+                                {
+                                    "id": 4053,
+                                    "name": "olive oil",
+                                    "localizedName": "olive oil",
+                                    "image": "olive-oil.jpg"
+                                },
+                                {
+                                    "id": 16158,
+                                    "name": "hummus",
+                                    "localizedName": "hummus",
+                                    "image": "hummus.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404783,
+                                    "name": "bowl",
+                                    "localizedName": "bowl",
+                                    "image": "bowl.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 6,
+                            "step": "Sprinkle with za'atar and paprika, and serve with chopped fresh vegetables or toasted pita triangles.Refrigerate leftover hummus for a few days or freeze for up to a month.",
+                            "ingredients": [
+                                {
+                                    "id": 11583,
+                                    "name": "vegetable",
+                                    "localizedName": "vegetable",
+                                    "image": "mixed-vegetables.png"
+                                },
+                                {
+                                    "id": 2028,
+                                    "name": "paprika",
+                                    "localizedName": "paprika",
+                                    "image": "paprika.jpg"
+                                },
+                                {
+                                    "id": 1002042,
+                                    "name": "zaatar",
+                                    "localizedName": "zaatar",
+                                    "image": "zaatar.png"
+                                },
+                                {
+                                    "id": 16158,
+                                    "name": "hummus",
+                                    "localizedName": "hummus",
+                                    "image": "hummus.jpg"
+                                },
+                                {
+                                    "id": 18413,
+                                    "name": "pita",
+                                    "localizedName": "pita",
+                                    "image": "pita-bread.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        }
+                    ]
+                }
+            ],
+            "spoonacularScore": 98.60186767578125,
+            "spoonacularSourceUrl": "https://spoonacular.com/hummus-and-zaatar-766453"
+        },
+        {
+            "vegetarian": true,
+            "vegan": true,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": true,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 9,
+            "gaps": "no",
+            "preparationMinutes": -1,
+            "cookingMinutes": -1,
+            "aggregateLikes": 44,
+            "healthScore": 83,
+            "creditsText": "blogspot.com",
+            "sourceName": "blogspot.com",
+            "pricePerServing": 112.68,
+            "id": 794349,
+            "title": "Broccoli and Chickpea Rice Salad",
+            "readyInMinutes": 45,
+            "servings": 6,
+            "sourceUrl": "http://foodandspice.blogspot.com/2016/07/broccoli-and-chickpea-rice-salad.html",
+            "image": "https://spoonacular.com/recipeImages/794349-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Broccoli and Chickpea Rice Salad takes roughly <b>45 minutes</b> from beginning to end. Watching your figure? This gluten free, dairy free, lacto ovo vegetarian, and vegan recipe has <b>355 calories</b>, <b>15g of protein</b>, and <b>10g of fat</b> per serving. This recipe serves 6. For <b>$1.13 per serving</b>, this recipe <b>covers 30%</b> of your daily requirements of vitamins and minerals. It works well as a main course. 44 people were glad they tried this recipe. It is brought to you by foodandspice.blogspot.com. A mixture of ground pepper, broccoli florets, olive oil, and a handful of other ingredients are all it takes to make this recipe so tasty. With a spoonacular <b>score of 99%</b>, this dish is tremendous. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/broccoli-and-chickpea-rice-salad-1380823\">Broccoli and Chickpea Rice Salad</a>, <a href=\"https://spoonacular.com/recipes/broccoli-and-chickpea-rice-salad-1401089\">Broccoli and Chickpea Rice Salad</a>, and <a href=\"https://spoonacular.com/recipes/broccoli-and-chickpea-rice-salad-1287405\">Broccoli and Chickpea Rice Salad</a>.",
+            "cuisines": [],
+            "dishTypes": [
+                "side dish",
+                "lunch",
+                "main course",
+                "salad",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free",
+                "lacto ovo vegetarian",
+                "vegan"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "In a large skillet, heat the oil over medium heat.",
+                            "ingredients": [
+                                {
+                                    "id": 4582,
+                                    "name": "cooking oil",
+                                    "localizedName": "cooking oil",
+                                    "image": "vegetable-oil.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404645,
+                                    "name": "frying pan",
+                                    "localizedName": "frying pan",
+                                    "image": "pan.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 2,
+                            "step": "Add the broccoli, stir well, and cover. Cook, stirring often, until the broccoli is tender.",
+                            "ingredients": [
+                                {
+                                    "id": 11090,
+                                    "name": "broccoli",
+                                    "localizedName": "broccoli",
+                                    "image": "broccoli.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 3,
+                            "step": "Add the broccoli to a large bowl, along with the remaining salad ingredients.To make the dressing, whisk together all of the dressing ingredients in a small bowl.",
+                            "ingredients": [
+                                {
+                                    "id": 11090,
+                                    "name": "broccoli",
+                                    "localizedName": "broccoli",
+                                    "image": "broccoli.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404661,
+                                    "name": "whisk",
+                                    "localizedName": "whisk",
+                                    "image": "whisk.png"
+                                },
+                                {
+                                    "id": 404783,
+                                    "name": "bowl",
+                                    "localizedName": "bowl",
+                                    "image": "bowl.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 4,
+                            "step": "Pour the dressing over the salad and toss well to coat evenly. Taste for seasoning and serve.",
+                            "ingredients": [
+                                {
+                                    "id": 1042027,
+                                    "name": "seasoning",
+                                    "localizedName": "seasoning",
+                                    "image": "seasoning.png"
+                                }
+                            ],
+                            "equipment": []
+                        }
+                    ]
+                }
+            ],
+            "spoonacularScore": 98.29674530029297,
+            "spoonacularSourceUrl": "https://spoonacular.com/broccoli-and-chickpea-rice-salad-794349"
+        },
+        {
+            "vegetarian": true,
+            "vegan": true,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 3,
+            "gaps": "no",
+            "preparationMinutes": -1,
+            "cookingMinutes": -1,
+            "aggregateLikes": 161,
+            "healthScore": 40,
+            "creditsText": "Lisa's Vegetarian Kitchen",
+            "license": "CC BY 2.5 CA",
+            "sourceName": "Food and Spice",
+            "pricePerServing": 43.68,
+            "id": 716195,
+            "title": "Spicy Indian-Style Hummus",
+            "readyInMinutes": 45,
+            "servings": 12,
+            "sourceUrl": "http://foodandspice.blogspot.com/2012/07/spicy-hummus-indian-style.html",
+            "image": "https://spoonacular.com/recipeImages/716195-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "You can never have too many middl eastern recipes, so give Spicy Indian-Style Hummus a try. For <b>44 cents per serving</b>, you get a hor d'oeuvre that serves 12. Watching your figure? This gluten free, dairy free, lacto ovo vegetarian, and vegan recipe has <b>134 calories</b>, <b>5g of protein</b>, and <b>6g of fat</b> per serving. This recipe from foodandspice.blogspot.com has 161 fans. From preparation to the plate, this recipe takes about <b>45 minutes</b>. Head to the store and pick up turmeric, chilies, sea salt, and a few other things to make it today. With a spoonacular <b>score of 96%</b>, this dish is outstanding. Users who liked this recipe also liked <a href=\"https://spoonacular.com/recipes/indian-style-spicy-couscous-647863\">Indian Style Spicy Couscous</a>, <a href=\"https://spoonacular.com/recipes/red-onion-indian-spiced-hummus-217684\">Red onion & Indian-spiced hummus</a>, and <a href=\"https://spoonacular.com/recipes/indian-style-coleslaw-603940\">Indian-Style Coleslaw</a>.",
+            "cuisines": [
+                "Middle Eastern"
+            ],
+            "dishTypes": [
+                "antipasti",
+                "condiment",
+                "starter",
+                "snack",
+                "appetizer",
+                "dip",
+                "antipasto",
+                "hor d'oeuvre",
+                "spread"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free",
+                "lacto ovo vegetarian",
+                "vegan"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Rinse the chickpeas and soak for 8 hours or overnight covered in several inches of water with a little yogurt whey or lemon juice added.",
+                            "ingredients": [
+                                {
+                                    "id": 9152,
+                                    "name": "lemon juice",
+                                    "localizedName": "lemon juice",
+                                    "image": "lemon-juice.jpg"
+                                },
+                                {
+                                    "id": 16057,
+                                    "name": "chickpeas",
+                                    "localizedName": "chickpeas",
+                                    "image": "chickpeas.png"
+                                },
+                                {
+                                    "id": 1116,
+                                    "name": "yogurt",
+                                    "localizedName": "yogurt",
+                                    "image": "plain-yogurt.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 480,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 2,
+                            "step": "Drain and rinse, then transfer to a large saucepan.  Cover with several inches of fresh water, bring to a boil, reduce the heat to medium-low and cover.  Simmer for 1 to 1 1/2 hours or until the beans are buttery soft.",
+                            "ingredients": [
+                                {
+                                    "id": 0,
+                                    "name": "beans",
+                                    "localizedName": "beans",
+                                    "image": "kidney-beans.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404669,
+                                    "name": "sauce pan",
+                                    "localizedName": "sauce pan",
+                                    "image": "sauce-pan.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 120,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 3,
+                            "step": "Drain.In a food processor, combine all of the ingredients and process until you have a thick, smooth paste. You may need to add extra olive oil or a bit of water if you want a thinner paste. Makes 3 cups, nutrition information is based on 1/4 cup serving.",
+                            "ingredients": [
+                                {
+                                    "id": 4053,
+                                    "name": "olive oil",
+                                    "localizedName": "olive oil",
+                                    "image": "olive-oil.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404771,
+                                    "name": "food processor",
+                                    "localizedName": "food processor",
+                                    "image": "food-processor.png"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "spoonacularScore": 96.61827850341797,
+            "spoonacularSourceUrl": "https://spoonacular.com/spicy-indian-style-hummus-716195"
+        }
+    ],
+    "offset": 0,
+    "number": 3,
+    "totalResults": 32
+}

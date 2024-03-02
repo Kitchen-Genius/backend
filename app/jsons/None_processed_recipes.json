@@ -1,1 +1,453 @@
-[]
+[
+    {
+        "vegetarian": true,
+        "vegan": true,
+        "glutenFree": true,
+        "dairyFree": true,
+        "veryHealthy": true,
+        "readyInMinutes": 45,
+        "servings": 4,
+        "id": 766453,
+        "title": "Hummus and Za'atar",
+        "image": "https://spoonacular.com/recipeImages/766453-312x231.jpg",
+        "analyzedInstructions": [
+            {
+                "steps": [
+                    {
+                        "step": "Rinse the chickpeas and soak for 8 hours or overnight in several inches of water.",
+                        "number": 1
+                    },
+                    {
+                        "step": "Drain and rinse, then transfer to a medium saucepan and cover with fresh water. Bring to a boil, reduce heat to medium-low, cover, and simmer for 1 to 1 1/2 hours or until soft.",
+                        "number": 2
+                    },
+                    {
+                        "step": "Drain, reserving the cooking liquid. (If using canned chickpeas, rinse thoroughly.)Meanwhile, toast the pine nuts in a dry unoiled skillet or saucepan over medium-low heat, tossing or stirring frequently, for 10 minutes or until lightly browned.",
+                        "number": 3
+                    },
+                    {
+                        "step": "Transfer the chickpeas to a food processor and add the pine nuts, 2 tablespoons of olive oil, 1/4 cup of the reserved chickpea cooking liquid (or water if using canned chicpeas), the tahini, garlic, lemon juice and salt. Process until smooth, adding more of the reserved chickpea cooking liquid or water as necessary to reach a light creamy consistency. Taste for seasoning and add more salt or lemon juice as desired.",
+                        "number": 4
+                    },
+                    {
+                        "step": "Transfer the hummus to a shallow bowl and drizzle with olive oil.",
+                        "number": 5
+                    },
+                    {
+                        "step": "Sprinkle with za'atar and paprika, and serve with chopped fresh vegetables or toasted pita triangles.Refrigerate leftover hummus for a few days or freeze for up to a month.",
+                        "number": 6
+                    }
+                ]
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "cooked dried chickpeas",
+                "image": "chickpeas.png",
+                "amount": {
+                    "value": 3.0,
+                    "unit": "cups"
+                }
+            },
+            {
+                "name": "garlic",
+                "image": "garlic.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "cloves"
+                }
+            },
+            {
+                "name": "lemon (juice)",
+                "image": "lemon-juice.jpg",
+                "amount": {
+                    "value": 3.0,
+                    "unit": ""
+                }
+            },
+            {
+                "name": "olive oil",
+                "image": "olive-oil.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "Tbsps"
+                }
+            },
+            {
+                "name": "paprika",
+                "image": "paprika.jpg",
+                "amount": {
+                    "value": 4.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "pine nuts",
+                "image": "pine-nuts.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "Tbsps"
+                }
+            },
+            {
+                "name": "sea salt",
+                "image": "salt.jpg",
+                "amount": {
+                    "value": 1.5,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "tahini",
+                "image": "tahini-paste.png",
+                "amount": {
+                    "value": 0.33333334,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "za'atar",
+                "image": "zaatar.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "Tbsps"
+                }
+            }
+        ],
+        "Calories": 778.28
+    },
+    {
+        "vegetarian": true,
+        "vegan": true,
+        "glutenFree": true,
+        "dairyFree": true,
+        "veryHealthy": true,
+        "readyInMinutes": 45,
+        "servings": 6,
+        "id": 794349,
+        "title": "Broccoli and Chickpea Rice Salad",
+        "image": "https://spoonacular.com/recipeImages/794349-312x231.jpg",
+        "analyzedInstructions": [
+            {
+                "steps": [
+                    {
+                        "step": "In a large skillet, heat the oil over medium heat.",
+                        "number": 1
+                    },
+                    {
+                        "step": "Add the broccoli, stir well, and cover. Cook, stirring often, until the broccoli is tender.",
+                        "number": 2
+                    },
+                    {
+                        "step": "Add the broccoli to a large bowl, along with the remaining salad ingredients.To make the dressing, whisk together all of the dressing ingredients in a small bowl.",
+                        "number": 3
+                    },
+                    {
+                        "step": "Pour the dressing over the salad and toss well to coat evenly. Taste for seasoning and serve.",
+                        "number": 4
+                    }
+                ]
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "almonds",
+                "image": "almonds.jpg",
+                "amount": {
+                    "value": 0.25,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "broccoli florets",
+                "image": "broccoli.jpg",
+                "amount": {
+                    "value": 4.0,
+                    "unit": "cups"
+                }
+            },
+            {
+                "name": "cooked dried brown rice",
+                "image": "rice-brown-cooked.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "cups"
+                }
+            },
+            {
+                "name": "dijon mustard",
+                "image": "dijon-mustard.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "Tbsps"
+                }
+            },
+            {
+                "name": "cooked dried chickpeas",
+                "image": "chickpeas.png",
+                "amount": {
+                    "value": 1.5,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "trimmed fresh parsley",
+                "image": "cilantro.png",
+                "amount": {
+                    "value": 0.25,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "garlic",
+                "image": "garlic.png",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "clove"
+                }
+            },
+            {
+                "name": "trimmed to 3 green onions",
+                "image": "spring-onions.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": ""
+                }
+            },
+            {
+                "name": "black fresh ground pepper",
+                "image": "pepper.jpg",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "lemon (juice)",
+                "image": "lemon-juice.jpg",
+                "amount": {
+                    "value": 1.5,
+                    "unit": ""
+                }
+            },
+            {
+                "name": "olive oil",
+                "image": "olive-oil.jpg",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "Tbsp"
+                }
+            },
+            {
+                "name": "olive oil",
+                "image": "olive-oil.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "2 tablespoons pineapple juice (juice from canned pineapple)",
+                "image": "pineapple-juice.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": ""
+                }
+            },
+            {
+                "name": "red pepper flakes",
+                "image": "red-pepper-flakes.jpg",
+                "amount": {
+                    "value": 0.5,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "sea salt",
+                "image": "salt.jpg",
+                "amount": {
+                    "value": 1.5,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "sun-dried tomatoes",
+                "image": "sundried-tomatoes.jpg",
+                "amount": {
+                    "value": 0.33333334,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "tamari sauce",
+                "image": "soy-sauce.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "tsps"
+                }
+            }
+        ],
+        "Calories": 354.93
+    },
+    {
+        "vegetarian": true,
+        "vegan": true,
+        "glutenFree": true,
+        "dairyFree": true,
+        "veryHealthy": false,
+        "readyInMinutes": 45,
+        "servings": 12,
+        "id": 716195,
+        "title": "Spicy Indian-Style Hummus",
+        "image": "https://spoonacular.com/recipeImages/716195-312x231.jpg",
+        "analyzedInstructions": [
+            {
+                "steps": [
+                    {
+                        "step": "Rinse the chickpeas and soak for 8 hours or overnight covered in several inches of water with a little yogurt whey or lemon juice added.",
+                        "number": 1
+                    },
+                    {
+                        "step": "Drain and rinse, then transfer to a large saucepan.  Cover with several inches of fresh water, bring to a boil, reduce the heat to medium-low and cover.  Simmer for 1 to 1 1/2 hours or until the beans are buttery soft.",
+                        "number": 2
+                    },
+                    {
+                        "step": "Drain.In a food processor, combine all of the ingredients and process until you have a thick, smooth paste. You may need to add extra olive oil or a bit of water if you want a thinner paste. Makes 3 cups, nutrition information is based on 1/4 cup serving.",
+                        "number": 3
+                    }
+                ]
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "asafetida",
+                "image": "curry-powder.jpg",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "pinch"
+                }
+            },
+            {
+                "name": "cayenne",
+                "image": "chili-powder.jpg",
+                "amount": {
+                    "value": 0.25,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "dried chickpeas",
+                "image": "chickpeas.png",
+                "amount": {
+                    "value": 1.25,
+                    "unit": "cups"
+                }
+            },
+            {
+                "name": "fresh chives",
+                "image": "fresh-chives.jpg",
+                "amount": {
+                    "value": 0.25,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "fresh ginger",
+                "image": "ginger.png",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "inch"
+                }
+            },
+            {
+                "name": "fresh parsley",
+                "image": "parsley.jpg",
+                "amount": {
+                    "value": 0.5,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "garlic",
+                "image": "garlic.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "cloves"
+                }
+            },
+            {
+                "name": "ground coriander",
+                "image": "ground-coriander.jpg",
+                "amount": {
+                    "value": 0.5,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "ground cumin",
+                "image": "ground-cumin.jpg",
+                "amount": {
+                    "value": 0.5,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "black fresh ground pepper",
+                "image": "pepper.jpg",
+                "amount": {
+                    "value": 12.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "lemon (juice)",
+                "image": "lemon-juice.jpg",
+                "amount": {
+                    "value": 1.0,
+                    "unit": ""
+                }
+            },
+            {
+                "name": "olive oil",
+                "image": "olive-oil.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "Tbsps"
+                }
+            },
+            {
+                "name": "red green fresh chilies",
+                "image": "red-chili.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": ""
+                }
+            },
+            {
+                "name": "sea salt",
+                "image": "salt.jpg",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "tsp"
+                }
+            },
+            {
+                "name": "tahini",
+                "image": "tahini-paste.png",
+                "amount": {
+                    "value": 0.25,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "turmeric",
+                "image": "turmeric.jpg",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "tsp"
+                }
+            }
+        ],
+        "Calories": 133.79
+    }
+]
