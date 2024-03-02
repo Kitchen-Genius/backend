@@ -111,7 +111,7 @@ async def process_recipes_criteria(criteria: ProcessRecipesCriteria = Body(...))
 
 
 @router.post("/atlas/save_recipe")
-async def save_recipe(recipe: dict = Body(...)):
+async def save_recipe(recipe: RecipeCriteria = Body(...)):
     try:
         # collection.insert_one(
         #     {"User": recipe["user"]},
