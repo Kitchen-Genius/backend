@@ -49,7 +49,7 @@ def process_recipe(recipe_json, ingredients_json, nutrition_json):
 
 async def process_and_save_recipes(diet="", includeIngredients="", type="", intolerances="", instructionsRequired=True, number=10):
     # Fetch recipes based on criteria
-    recipes_data = await search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired, number, addRecipeInformation=True)
+    recipes_data = await search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired, number)
     processed_recipes = []
 
     for recipe in recipes_data.get("results", []):

@@ -11,7 +11,7 @@ load_dotenv()
 API_KEY = os.getenv("SPOONACULAR_API_KEY")
 
 ## TODO allow searching with empty diet, type and intolerances: ##
-async def search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired=True, number=1, addRecipeInformation=True):
+async def search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired=True, number=1):
     if not validate_params('diets', diet, 'diets') or not validate_params('meal_types', type, 'meal_types') or not validate_params('intolerances', intolerances, 'intolerances'):
         return {"error": "Invalid diet, type, or intolerance parameter"}
 
@@ -24,7 +24,6 @@ async def search_recipes(diet, includeIngredients, type, intolerances, instructi
         "intolerances": intolerances,
         "instructionsRequired": instructionsRequired,
         "number": number,
-        "addRecipeInformation": addRecipeInformation,
     }
 
     async with httpx.AsyncClient() as client:
