@@ -10,7 +10,8 @@ load_dotenv()
 
 API_KEY = os.getenv("SPOONACULAR_API_KEY")
 
-async def search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired=True, number=1, addRecipeInformation=True):
+## TODO allow searching with empty diet, type and intolerances: ##
+async def search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired=True, number=1):
     if not validate_params('diets', diet, 'diets') or not validate_params('meal_types', type, 'meal_types') or not validate_params('intolerances', intolerances, 'intolerances'):
         return {"error": "Invalid diet, type, or intolerance parameter"}
 
@@ -23,7 +24,6 @@ async def search_recipes(diet, includeIngredients, type, intolerances, instructi
         "intolerances": intolerances,
         "instructionsRequired": instructionsRequired,
         "number": number,
-        "addRecipeInformation": addRecipeInformation
     }
 
     async with httpx.AsyncClient() as client:
@@ -63,3 +63,12 @@ def get_analyzed_recipe_instructions(id, stepBreakdown=True):
     
     return data
 
+async def fetch_recipe_nutrition(recipe_id: int):
+    url = f"https://api.spoonacular.com/recipes/{recipe_id}/nutritionWidget.json"
+    params = {"apiKey": API_KEY}
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url, params=params)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return {"error": "Failed to fetch recipe nutrition", "status_code": response.status_code}
