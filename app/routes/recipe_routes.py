@@ -131,7 +131,7 @@ async def save_recipe(user_id: str, recipe_id: str, state: bool):
 async def save_recipe(user_id: str, recipe_id: str, state: bool):
     try:
         # Check if the user exists in the collection
-        user_data = collection.find_one({"User": user_id})
+        user_data = collection.find_one({"user_id": user_id})
         if not user_data:
             raise HTTPException(status_code=404, detail=f"User {user_id} not found")
 
@@ -139,13 +139,13 @@ async def save_recipe(user_id: str, recipe_id: str, state: bool):
         if state:
             # If state is true, push the recipe_id into the saved_list
             collection.update_one(
-                {"User": user_id},
+                {"user_id": user_id},
                 {"$addToSet": {"saved_list": recipe_id}}
             )
         else:
             # If state is false, remove the recipe_id from the saved_list
             collection.update_one(
-                {"User": user_id},
+                {"user_id": user_id},
                 {"$pull": {"saved_list": recipe_id}}
             )
 
@@ -165,7 +165,7 @@ async def get_recipes(user_id: str):
         saved_list = user_data.get("saved_list", [])
 
         # Assuming you have a separate collection for recipes
-        recipes_collection = db["recipes"]
+        recipes_collection = db["saved_recipes"]
 
         # Retrieve the recipes from 'recipes_collection' based on the saved_list
         recipes = recipes_collection.find({"recipe_id": {"$in": saved_list}})
