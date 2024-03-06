@@ -1,12 +1,11 @@
 from fastapi import APIRouter, Depends, Body, HTTPException
 from pymongo import MongoClient
-from bson.objectid import ObjectId
 from app.services import spoonacular as spoonacular_service
 from app.services.recipe_processing import process_and_save_recipes, prepare_recipe_search_criteria, get_cached_recipe_by_id
 from app.utils.validations import validate_diet, validate_type, validate_intolerances
 from app.models.recipe_models import ProcessRecipesCriteria
-from app.models.recipe_search_criteria import RecipeSearchCriteria
-from app.services.recipe_service import process_search_criteria
+from app.models.recipe_search import RecipeSearchRequest
+from app.services.recipe_service import process_and_save_recipes
 
 
 MONGODB_URI = "mongodb+srv://KGUser:jXH2M8loFrZjtSYR@cluster0.v1oaihv.mongodb.net/"
@@ -202,10 +201,10 @@ async def get_recipe(recipe_id: int):
     return recipe
 
 @router.post("/recipes/search")
-async def search_recipes(request_body: dict = Body(...)):
-    ingredients = ",".join(request_body.get("ingredients", []))
-    diet = "vegetarian" if request_body.get("Vegetarian", False) else ""
-    intolerances = "gluten" if request_body.get("Gluten_free", False) else ""
+async def search_recipes(request_body: RecipeSearchRequest):
+    ingredients = ",".join(request_body.ingredients)
+    diet = "vegetarian" if request_body.Vegetarian else ""
+    intolerances = "gluten" if request_body.Gluten_free else ""
 
     try:
         recipes = await process_and_save_recipes(
