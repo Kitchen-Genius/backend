@@ -1,0 +1,26 @@
+[
+  {
+    "user_id": 123,
+    "username": "Steve",
+    "email": "KitchanG@gmail.com",
+    "password": "123",
+    "img": "https://github.com/Kitchen-Genius/frontend/blob/main/src/my_Images/steven_pic.png",
+    "saved_list_id": "ObjectId('65d09aafa324893c4001782b')"
+  },
+  {
+    "user_id": 456,
+    "username": "John",
+    "email": "john.doe@gmail.com",
+    "password": "456",
+    "img": "https://github.com/Kitchen-Genius/frontend/blob/main/src/my_Images/john.jpg",
+    "saved_list_id": "65d09aafa324893c4001782b"
+  },
+  {
+    "user_id": 789,
+    "username": "Emma",
+    "email": "emma.smith@gmail.com",
+    "password": "789",
+    "img": "https://github.com/Kitchen-Genius/frontend/blob/main/src/my_Images/emma.jpg",
+    "saved_list_id": "65d09aafa324893c4001782b"
+  }
+]
