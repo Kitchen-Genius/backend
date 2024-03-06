@@ -4,6 +4,8 @@ from app.utils.file_utils import save_data_locally
 from app.utils.json_encoder import custom_json_response
 from app.database.db import saved_recipies
 from typing import List, Dict
+from bson import ObjectId
+
 
 def prepare_recipe_search_criteria(criteria_json: List[Dict]):
     # Assuming criteria_json is a list of criteria, but we'll just use the first item for this example
@@ -114,7 +116,15 @@ def process_ingredients_to_us_measurements(ingredients):
 
 async def get_cached_recipe(recipe_id: int):
     recipe = await saved_recipies.find_one({"id": recipe_id})
-    return custom_json_response(recipe)
+    return serialize_document(recipe)
+
+def serialize_document(doc):
+    """Convert MongoDB document to a JSON serializable Python dict."""
+    if not doc:
+        return None  # or return {} based on your preference for non-found documents
+    doc["_id"] = str(doc["_id"])  # Convert ObjectId to string if needed
+    # Convert other non-serializable types here
+    return doc
 
 async def cache_recipe(recipe_data):
     await saved_recipies.insert_one(recipe_data)
