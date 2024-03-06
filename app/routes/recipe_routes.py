@@ -48,7 +48,7 @@ async def search_recipes(
                                                     number, addRecipeInformation, maxReadyTime)
     if "error" in data:
         raise HTTPException(status_code=400, detail=data["error"])
-    return data
+    return {"results": []}
 
 
 @router.get("/recipes/")

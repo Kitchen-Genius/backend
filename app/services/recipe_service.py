@@ -12,7 +12,7 @@ async def process_search_criteria(criteria: RecipeSearchCriteria) -> str:
     # Determine intolerances based on Gluten_free flag
     intolerances = "gluten" if criteria.Gluten_free else ""
     
-    # Call the function to search and save recipes (assuming it's already defined)
+    # Call the function to search and save recipes
     recipes = await process_and_save_recipes(diet=diet, includeIngredients=ingredients_str, intolerances=intolerances)
     
     return recipes
