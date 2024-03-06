@@ -1,10 +1,8 @@
 # recipe_processing.py
 from app.services.spoonacular import search_recipes, fetch_recipe_ingredients, fetch_recipe_nutrition
 from app.utils.file_utils import save_data_locally
-from app.utils.json_encoder import custom_json_response
 from app.database.db import saved_recipies
 from typing import List, Dict
-from bson import ObjectId
 
 
 def prepare_recipe_search_criteria(criteria_json: List[Dict]):
@@ -149,3 +147,11 @@ def serialize_recipe_document(doc):
 
 async def cache_recipe(recipe_data):
     await saved_recipies.insert_one(recipe_data)
+
+
+async def get_cached_recipe_by_id(recipe_id: int):
+    recipe = await saved_recipies.find_one({"id": recipe_id})
+    if recipe:
+        return serialize_recipe_document(recipe)
+    else:
+        return None

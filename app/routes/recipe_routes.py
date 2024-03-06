@@ -5,6 +5,9 @@ from app.services import spoonacular as spoonacular_service
 from app.services.recipe_processing import process_and_save_recipes, prepare_recipe_search_criteria, get_cached_recipe_by_id
 from app.utils.validations import validate_diet, validate_type, validate_intolerances
 from app.models.recipe_models import ProcessRecipesCriteria
+from app.models.recipe_search_criteria import RecipeSearchCriteria
+from app.services.recipe_service import process_search_criteria
+
 
 MONGODB_URI = "mongodb+srv://KGUser:jXH2M8loFrZjtSYR@cluster0.v1oaihv.mongodb.net/"
 DATABASE_NAME = "KitchenGenius"
@@ -197,3 +200,11 @@ async def get_recipe(recipe_id: int):
     if not recipe:
         raise HTTPException(status_code=404, detail="Recipe not found")
     return recipe
+
+@router.post("/recipes/search")
+async def search_recipes(criteria: RecipeSearchCriteria = Body(...)):
+    try:
+        recipes = await process_search_criteria(criteria)
+        return recipes
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
