@@ -9,10 +9,12 @@ async def authenticate_user(email: str, password: str):
     if not user:
         return False
 
+    stored_hashed_password = user['password']
     password_bytes = password.encode('utf-8')
-    hashed_password_bytes = user['password'].encode('utf-8')
-
-    if bcrypt.checkpw(password_bytes, hashed_password_bytes):
+    
+    if bcrypt.checkpw(password_bytes, stored_hashed_password):
+        # Authentication successful
         return True
     else:
+        # Authentication failed
         return False

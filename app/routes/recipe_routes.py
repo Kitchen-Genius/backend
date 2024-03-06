@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, Body, HTTPException
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 from app.services import spoonacular as spoonacular_service
-from app.services.recipe_processing import process_and_save_recipes
+from app.services.recipe_processing import process_and_save_recipes, prepare_recipe_search_criteria
 from app.utils.validations import validate_diet, validate_type, validate_intolerances
 from app.models.recipe_models import ProcessRecipesCriteria
 
