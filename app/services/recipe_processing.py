@@ -54,6 +54,10 @@ def process_recipe(recipe_json, ingredients_json, nutrition_json):
 async def process_and_save_recipes(diet="", includeIngredients="", type="", intolerances="", instructionsRequired=True, number=10, addRecipeInformation=True, maxReadyTime=20):
     # Fetch recipes based on criteria
     recipes_data = await search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired, number, addRecipeInformation, maxReadyTime)
+    
+    if recipes_data is None or "results" not in recipes_data:
+        raise ValueError("Failed to fetch recipes or no recipes found.")
+    
     processed_recipes = []
 
     for recipe in recipes_data.get("results", []):

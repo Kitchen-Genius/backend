@@ -202,9 +202,17 @@ async def get_recipe(recipe_id: int):
     return recipe
 
 @router.post("/recipes/search")
-async def search_recipes(criteria: RecipeSearchCriteria = Body(...)):
+async def search_recipes(request_body: dict = Body(...)):
+    ingredients = ",".join(request_body.get("ingredients", []))
+    diet = "vegetarian" if request_body.get("Vegetarian", False) else ""
+    intolerances = "gluten" if request_body.get("Gluten_free", False) else ""
+
     try:
-        recipes = await process_search_criteria(criteria)
+        recipes = await process_and_save_recipes(
+            diet=diet,
+            includeIngredients=ingredients,
+            intolerances=intolerances
+        )
         return recipes
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
