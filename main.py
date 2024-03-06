@@ -17,7 +17,7 @@ app.include_router(recipe_router)
 # List of origins allowed to make requests to this API
 origins = [
     "http://localhost:3000",  # React's default development port
-    "https://frontend-41ag.onrender.com",  # Adjust for production
+    "https://frontend-nu-murex.vercel.app",  # Adjust for production
 ]
 
 app.add_middleware(
