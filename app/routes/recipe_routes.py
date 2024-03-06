@@ -9,7 +9,7 @@ from app.models.recipe_models import ProcessRecipesCriteria
 MONGODB_URI = "mongodb+srv://KGUser:jXH2M8loFrZjtSYR@cluster0.v1oaihv.mongodb.net/"
 DATABASE_NAME = "KitchenGenius"
 COLLECTION_NAME = "saved_recipies"
-COLLECTION_USERS = "Users"
+COLLECTION_USERS = "users"
 
 # Create a MongoClient instance
 client = MongoClient(MONGODB_URI)
@@ -19,63 +19,76 @@ collectionUsers = db[COLLECTION_USERS]
 
 router = APIRouter()
 
+
 class Item:
     def __init__(self, name: str, description: str):
         self.name = name
         self.description = description
 
+
 router = APIRouter()
+
 
 @router.get("/search-recipes/")
 async def search_recipes(
-    diet: str = Depends(validate_diet),
-    includeIngredients: str = None, 
-    type: str = Depends(validate_type), 
-    intolerances: str = Depends(validate_intolerances), 
-    instructionsRequired: bool = True, 
-    addRecipeInformation: bool = True,
-    maxReadyTime: int = 20,
-    number: int = 1
+        diet: str = Depends(validate_diet),
+        includeIngredients: str = None,
+        type: str = Depends(validate_type),
+        intolerances: str = Depends(validate_intolerances),
+        instructionsRequired: bool = True,
+        addRecipeInformation: bool = True,
+        maxReadyTime: int = 20,
+        number: int = 1
 
 ):
-    data = await spoonacular_service.search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired, number, addRecipeInformation, maxReadyTime )
+    data = await spoonacular_service.search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired,
+                                                    number, addRecipeInformation, maxReadyTime)
     if "error" in data:
         raise HTTPException(status_code=400, detail=data["error"])
     return data
 
+
 @router.get("/recipes/")
 async def get_recipes(
-    diet: str = Depends(validate_diet),
-    includeIngredients: str = None,
-    type: str = Depends(validate_type),
-    intolerances: str = Depends(validate_intolerances),
-    instructionsRequired: bool = True,
-    number: int = 1
+        diet: str = Depends(validate_diet),
+        includeIngredients: str = None,
+        type: str = Depends(validate_type),
+        intolerances: str = Depends(validate_intolerances),
+        instructionsRequired: bool = True,
+        number: int = 1
 ):
     try:
-        recipes = await spoonacular_service.search_recipes(diet=diet, includeIngredients=includeIngredients, type=type, intolerances=intolerances, instructionsRequired=instructionsRequired, number=number)
+        recipes = await spoonacular_service.search_recipes(diet=diet, includeIngredients=includeIngredients, type=type,
+                                                           intolerances=intolerances,
+                                                           instructionsRequired=instructionsRequired, number=number)
         return recipes
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
+
 @router.get("/processed-recipes/")
 async def get_processed_recipes(
-    diet: str = Depends(validate_diet),
-    includeIngredients: str = None, 
-    type: str = Depends(validate_type), 
-    intolerances: str = Depends(validate_intolerances), 
-    instructionsRequired: bool = True, 
-    addRecipeInformation: bool = True,
-    maxReadyTime: int = 20,
-    number: int = 1
-    
+        diet: str = Depends(validate_diet),
+        includeIngredients: str = None,
+        type: str = Depends(validate_type),
+        intolerances: str = Depends(validate_intolerances),
+        instructionsRequired: bool = True,
+        addRecipeInformation: bool = True,
+        maxReadyTime: int = 20,
+        number: int = 1
+
 ):
     try:
-        processed_recipes = await process_and_save_recipes(diet=diet, includeIngredients=includeIngredients, type=type, intolerances=intolerances, instructionsRequired=instructionsRequired, number=number, addRecipeInformation=addRecipeInformation, maxReadyTime=maxReadyTime)
+        processed_recipes = await process_and_save_recipes(diet=diet, includeIngredients=includeIngredients, type=type,
+                                                           intolerances=intolerances,
+                                                           instructionsRequired=instructionsRequired, number=number,
+                                                           addRecipeInformation=addRecipeInformation,
+                                                           maxReadyTime=maxReadyTime)
         return processed_recipes
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+
+
 @router.post("/api/process-recipes-criteria")
 async def process_recipes_criteria(criteria: ProcessRecipesCriteria = Body(...)):
     try:
@@ -92,12 +105,10 @@ async def process_recipes_criteria(criteria: ProcessRecipesCriteria = Body(...))
                 number=criteria_dict.get("number", 10)
             )
             processed_recipes_list.append(processed_recipes)
-        
+
         return processed_recipes_list
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
-
 
 
 @router.post("/atlas/save_recipe")
@@ -153,6 +164,7 @@ async def save_recipe(user_id: str, recipe_id: str, state: bool):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
 @router.get("/atlas/get_recipes/{user_id}")
 async def get_recipes(user_id: str):
     try:
@@ -174,5 +186,3 @@ async def get_recipes(user_id: str):
         return {"user_id": user_id, "saved_recipes": list(recipes)}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
-
