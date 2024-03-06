@@ -73,7 +73,7 @@ async def process_and_save_recipes(diet="", includeIngredients="", type="", into
     
         # Process the recipe to include ingredients and calories
         processed_recipe = process_recipe({"results": [recipe]}, ingredients_data, nutrition_data)
-        await cache_recipe(processed_recipe)
+        # await cache_recipe(processed_recipe)
         processed_recipes.append(processed_recipe)
     
     # Save the processed recipes locally
