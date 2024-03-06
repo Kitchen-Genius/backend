@@ -1,6 +1,7 @@
 # recipe_processing.py
 from app.services.spoonacular import search_recipes, fetch_recipe_ingredients, fetch_recipe_nutrition
 from app.utils.file_utils import save_data_locally
+from app.database.db import saved_recipies
 from typing import List, Dict
 
 def prepare_recipe_search_criteria(criteria_json: List[Dict]):
@@ -56,11 +57,18 @@ async def process_and_save_recipes(diet="", includeIngredients="", type="", into
 
     for recipe in recipes_data.get("results", []):
         recipe_id = recipe.get("id")
+
+        cached_recipe = await get_cached_recipe(recipe_id)
+        if cached_recipe:
+            # Use the cached recipe
+            processed_recipes.append(cached_recipe)
+            continue
         ingredients_data = await fetch_recipe_ingredients(recipe_id)
         nutrition_data = await fetch_recipe_nutrition(recipe_id)  # Fetch nutrition information
     
         # Process the recipe to include ingredients and calories
         processed_recipe = process_recipe({"results": [recipe]}, ingredients_data, nutrition_data)
+        await cache_recipe(processed_recipe)
         processed_recipes.append(processed_recipe)
     
     # Save the processed recipes locally
@@ -102,3 +110,10 @@ def process_ingredients_to_us_measurements(ingredients):
         processed_ingredients.append(processed_ingredient)
 
     return processed_ingredients
+
+async def get_cached_recipe(recipe_id: int):
+    recipe = await saved_recipies.find_one({"id": recipe_id})
+    return recipe
+
+async def cache_recipe(recipe_data):
+    await saved_recipies.insert_one(recipe_data)
