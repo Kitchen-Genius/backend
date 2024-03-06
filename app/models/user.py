@@ -9,7 +9,7 @@ class User(BaseModel):
     email: EmailStr
     password: str  # This should be a hashed password in a real-world scenario
 
-    
+
 MONGODB_URI = "mongodb+srv://KGUser:jXH2M8loFrZjtSYR@cluster0.v1oaihv.mongodb.net/"
 DATABASE_NAME = "KitchenGenius"
 COLLECTION_NAME = "users"
