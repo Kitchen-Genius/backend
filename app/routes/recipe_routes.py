@@ -1,27 +1,23 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, Body, HTTPException
+from pymongo import MongoClient
+from bson.objectid import ObjectId
 from app.services import spoonacular as spoonacular_service
 from app.services.recipe_processing import process_and_save_recipes
 from app.utils.validations import validate_diet, validate_type, validate_intolerances
-from app.schemas.recipe_schemas import RecipeSearchCriteria
-from pymongo import MongoClient
+from app.models.recipe_models import ProcessRecipesCriteria
 
 MONGODB_URI = "mongodb+srv://KGUser:jXH2M8loFrZjtSYR@cluster0.v1oaihv.mongodb.net/"
 DATABASE_NAME = "KitchenGenius"
 COLLECTION_NAME = "saved_recipies"
-# Provide the connection details
-hostname = 'cluster0.v1oaihv.mongodb.net'
-port = 27017  # Default MongoDB port
-username = 'KGUser'  # If authentication is required
-password = 'jXH2M8loFrZjtSYR'  # If authentication is required
+COLLECTION_USERS = "Users"
 
 # Create a MongoClient instance
-
-client = MongoClient(MONGODB_URI )
-print("#####################")
-print(client)
-
+client = MongoClient(MONGODB_URI)
 db = client[DATABASE_NAME]
 collection = db[COLLECTION_NAME]
+collectionUsers = db[COLLECTION_USERS]
+
+router = APIRouter()
 
 class Item:
     def __init__(self, name: str, description: str):
@@ -81,51 +77,102 @@ async def get_processed_recipes(
         raise HTTPException(status_code=500, detail=str(e))
     
 @router.post("/api/process-recipes-criteria")
-async def process_recipe_criteria(criteria: RecipeSearchCriteria):
-    # Convert the ingredients dictionary to a comma-separated list of ingredient names
-    includeIngredients = ",".join(criteria.ingredients.values())
-
-    # Call your function to search for recipes with the processed ingredients and any special requests
-    # This is a placeholder for whatever logic you use to interact with the recipe API
+async def process_recipes_criteria(criteria: ProcessRecipesCriteria = Body(...)):
     try:
-        recipe_results = await search_recipes(
-            diet="",  # You'll need to adjust how you handle diets, types, and intolerances based on the frontend data
-            includeIngredients=includeIngredients,
-            type="",  # Adjust accordingly
-            intolerances="",  # Adjust accordingly
-            instructionsRequired=True,
-            number=10  # Example, adjust as needed
-        )
+        processed_recipes_list = []
+        for criteria_set in criteria.criteria:
+            criteria_dict = criteria_set.model_dump()
+            search_criteria = prepare_recipe_search_criteria([criteria_dict])  # Adjust if your logic expects a list
+            processed_recipes = await process_and_save_recipes(
+                diet=search_criteria["diet"],
+                includeIngredients=search_criteria["includeIngredients"],
+                type=criteria_dict.get("type", ""),
+                intolerances=criteria_dict.get("intolerances", ""),
+                instructionsRequired=criteria_dict.get("instructionsRequired", True),
+                number=criteria_dict.get("number", 10)
+            )
+            processed_recipes_list.append(processed_recipes)
+        
+        return processed_recipes_list
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to fetch recipes: {str(e)}")
-
-    # Return the recipe results to the frontend
-    return recipe_results
+        raise HTTPException(status_code=500, detail=str(e))
     
 
 
 
-# @router.post("/atlas/save_recipe")
-# async def save_recipe(recipe: RecipeCriteria = Body(...)):
-#     try:
-#         # collection.insert_one(
-#         #     {"User": recipe["user"]},
-#         #     {"$set": {"recipeCollectio": recipe }}
-#         # )
-#         result = collection.insert_one(recipe)
-#         return {"message": "Recipe saved successfully", "id": str(result.inserted_id)}
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=str(e))
-    
-
-@router.get("/atlas/get_recipes")
-async def get_recipes():
+@router.post("/atlas/save_recipe")
+async def save_recipe(user_id: str, recipe_id: str, state: bool):
     try:
-        recipes = collection.find()
-        return recipes
+        # Check if the user exists in the collection
+        user_data = collection.find_one({"User": user_id})
+        if not user_data:
+            raise HTTPException(status_code=404, detail=f"User {user_id} not found")
+
+        # Update the user's saved list based on the state
+        if state:
+            # If state is true, push the recipe_id into the saved_list
+            collection.update_one(
+                {"User": user_id},
+                {"$addToSet": {"saved_list": recipe_id}}
+            )
+        else:
+            # If state is false, remove the recipe_id from the saved_list
+            collection.update_one(
+                {"User": user_id},
+                {"$pull": {"saved_list": recipe_id}}
+            )
+
+        return {"message": "Recipe saved successfully", "user_id": user_id, "recipe_id": recipe_id}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@router.post("/atlas/save_recipe")
+async def save_recipe(user_id: str, recipe_id: str, state: bool):
+    try:
+        # Check if the user exists in the collection
+        user_data = collection.find_one({"user_id": user_id})
+        if not user_data:
+            raise HTTPException(status_code=404, detail=f"User {user_id} not found")
+
+        # Update the user's saved list based on the state
+        if state:
+            # If state is true, push the recipe_id into the saved_list
+            collection.update_one(
+                {"user_id": user_id},
+                {"$addToSet": {"saved_list": recipe_id}}
+            )
+        else:
+            # If state is false, remove the recipe_id from the saved_list
+            collection.update_one(
+                {"user_id": user_id},
+                {"$pull": {"saved_list": recipe_id}}
+            )
+
+        return {"message": "Recipe saved successfully", "user_id": user_id, "recipe_id": recipe_id}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/atlas/get_recipes/{user_id}")
+async def get_recipes(user_id: str):
+    try:
+        # Check if the user exists in the 'collection'
+        user_data = collectionUsers.find_one({"user_id": user_id})
+        if not user_data:
+            raise HTTPException(status_code=404, detail=f"User {user_id} not found")
+
+        # Retrieve the user's saved list of recipe IDs
+        saved_list = user_data.get("saved_list", [])
+
+        # Assuming you have a separate collection for recipes
+        recipes_collection = db["saved_recipes"]
+
+        # Retrieve the recipes from 'recipes_collection' based on the saved_list
+        recipes = recipes_collection.find({"recipe_id": {"$in": saved_list}})
+
+        # Return the recipes from the user's saved list
+        return {"user_id": user_id, "saved_recipes": list(recipes)}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
