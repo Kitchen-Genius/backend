@@ -116,15 +116,36 @@ def process_ingredients_to_us_measurements(ingredients):
 
 async def get_cached_recipe(recipe_id: int):
     recipe = await saved_recipies.find_one({"id": recipe_id})
-    return serialize_document(recipe)
+    return serialize_recipe_document(recipe)
 
-def serialize_document(doc):
-    """Convert MongoDB document to a JSON serializable Python dict."""
-    if not doc:
-        return None  # or return {} based on your preference for non-found documents
-    doc["_id"] = str(doc["_id"])  # Convert ObjectId to string if needed
-    # Convert other non-serializable types here
+def serialize_recipe_document(doc):
+    doc["_id"] = str(doc["_id"])  # Convert ObjectId to string
+    
+    # Process analyzedInstructions and ingredients to ensure they are in a serializable format
+    if "analyzedInstructions" in doc and isinstance(doc["analyzedInstructions"], list):
+        for instruction_set in doc["analyzedInstructions"]:
+            if "steps" in instruction_set:
+                instruction_set["steps"] = [
+                    {
+                        "step": step["step"],
+                        "number": step.get("number", "")
+                    } for step in instruction_set["steps"]
+                ]
+                
+    if "ingredients" in doc and isinstance(doc["ingredients"], list):
+        doc["ingredients"] = [
+            {
+                "name": ingredient["name"],
+                "image": ingredient.get("image", ""),
+                "amount": {
+                    "value": ingredient["amount"].get("value", ""),
+                    "unit": ingredient["amount"].get("unit", "")
+                }
+            } for ingredient in doc["ingredients"]
+        ]
+    
     return doc
+
 
 async def cache_recipe(recipe_data):
     await saved_recipies.insert_one(recipe_data)
