@@ -56,7 +56,7 @@ async def process_and_save_recipes(diet="", includeIngredients="", type="", into
     recipes_data = await search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired, number, addRecipeInformation, maxReadyTime)
     
     if recipes_data is None or "results" not in recipes_data:
-        raise ValueError("Failed to fetch recipes or no recipes found.")
+        return []
     
     processed_recipes = []
 
