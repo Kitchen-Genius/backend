@@ -1,8 +1,8 @@
-from fastapi import APIRouter, Depends, Body, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from app.services import spoonacular as spoonacular_service
-from app.services.recipe_processing import process_and_save_recipes, prepare_recipe_search_criteria
+from app.services.recipe_processing import process_and_save_recipes
 from app.utils.validations import validate_diet, validate_type, validate_intolerances
-from app.models.recipe_models import ProcessRecipesCriteria
+from app.schemas.recipe_schemas import RecipeSearchCriteria
 from pymongo import MongoClient
 
 MONGODB_URI = "mongodb+srv://KGUser:jXH2M8loFrZjtSYR@cluster0.v1oaihv.mongodb.net/"
@@ -81,25 +81,26 @@ async def get_processed_recipes(
         raise HTTPException(status_code=500, detail=str(e))
     
 @router.post("/api/process-recipes-criteria")
-async def process_recipes_criteria(criteria: ProcessRecipesCriteria = Body(...)):
+async def process_recipe_criteria(criteria: RecipeSearchCriteria):
+    # Convert the ingredients dictionary to a comma-separated list of ingredient names
+    includeIngredients = ",".join(criteria.ingredients.values())
+
+    # Call your function to search for recipes with the processed ingredients and any special requests
+    # This is a placeholder for whatever logic you use to interact with the recipe API
     try:
-        processed_recipes_list = []
-        for criteria_set in criteria.criteria:
-            criteria_dict = criteria_set.model_dump()
-            search_criteria = prepare_recipe_search_criteria([criteria_dict])  # Adjust if your logic expects a list
-            processed_recipes = await process_and_save_recipes(
-                diet=search_criteria["diet"],
-                includeIngredients=search_criteria["includeIngredients"],
-                type=criteria_dict.get("type", ""),
-                intolerances=criteria_dict.get("intolerances", ""),
-                instructionsRequired=criteria_dict.get("instructionsRequired", True),
-                number=criteria_dict.get("number", 10)
-            )
-            processed_recipes_list.append(processed_recipes)
-        
-        return processed_recipes_list
+        recipe_results = await search_recipes(
+            diet="",  # You'll need to adjust how you handle diets, types, and intolerances based on the frontend data
+            includeIngredients=includeIngredients,
+            type="",  # Adjust accordingly
+            intolerances="",  # Adjust accordingly
+            instructionsRequired=True,
+            number=10  # Example, adjust as needed
+        )
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=f"Failed to fetch recipes: {str(e)}")
+
+    # Return the recipe results to the frontend
+    return recipe_results
     
 
 
