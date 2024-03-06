@@ -7,9 +7,12 @@ import bcrypt
 async def authenticate_user(email: str, password: str):
     user = await users.find_one({"email": email})
     if not user:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+        return False
 
-    if not bcrypt.checkpw(password.encode('utf-8'), user['password']):
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Incorrect password")
+    password_bytes = password.encode('utf-8')
+    hashed_password_bytes = user['password'].encode('utf-8')
 
-    return user  # Or True, depending on how you wish to handle successful authentication
+    if bcrypt.checkpw(password_bytes, hashed_password_bytes):
+        return True
+    else:
+        return False
