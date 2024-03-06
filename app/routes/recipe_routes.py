@@ -157,7 +157,7 @@ async def save_recipe(user_id: str, recipe_id: str, state: bool):
 async def get_recipes(user_id: str):
     try:
         # Check if the user exists in the 'collection'
-        user_data = collectionUsers.find_one({"User": user_id})
+        user_data = collectionUsers.find_one({"user_id": user_id})
         if not user_data:
             raise HTTPException(status_code=404, detail=f"User {user_id} not found")
 
