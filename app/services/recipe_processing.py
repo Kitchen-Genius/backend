@@ -63,11 +63,11 @@ async def process_and_save_recipes(diet="", includeIngredients="", type="", into
     for recipe in recipes_data.get("results", []):
         recipe_id = recipe.get("id")
 
-        cached_recipe = await get_cached_recipe(recipe_id)
-        if cached_recipe:
-            # Use the cached recipe
-            processed_recipes.append(cached_recipe)
-            continue
+        # cached_recipe = await get_cached_recipe(recipe_id)
+        # if cached_recipe:
+        #     # Use the cached recipe
+        #     processed_recipes.append(cached_recipe)
+        #     continue
         ingredients_data = await fetch_recipe_ingredients(recipe_id)
         nutrition_data = await fetch_recipe_nutrition(recipe_id)  # Fetch nutrition information
     
