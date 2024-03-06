@@ -2,6 +2,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.recipe_routes import router as recipe_router
+from app.routes import auth_routes
 from dotenv import load_dotenv
 import os
 
@@ -13,6 +14,7 @@ SPOONACULAR_API_KEY = os.getenv("SPOONACULAR_API_KEY")
 app = FastAPI()
 
 app.include_router(recipe_router)
+app.include_router(auth_routes.router, prefix="/auth", tags=["Authentication"])
 
 # List of origins allowed to make requests to this API
 origins = [
