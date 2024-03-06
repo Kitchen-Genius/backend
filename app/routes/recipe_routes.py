@@ -9,11 +9,13 @@ from app.models.recipe_models import ProcessRecipesCriteria
 MONGODB_URI = "mongodb+srv://KGUser:jXH2M8loFrZjtSYR@cluster0.v1oaihv.mongodb.net/"
 DATABASE_NAME = "KitchenGenius"
 COLLECTION_NAME = "saved_recipies"
+COLLECTION_USERS = "Users"
 
 # Create a MongoClient instance
 client = MongoClient(MONGODB_URI)
 db = client[DATABASE_NAME]
 collection = db[COLLECTION_NAME]
+collectionUsers = db[COLLECTION_USERS]
 
 router = APIRouter()
 
@@ -155,7 +157,7 @@ async def save_recipe(user_id: str, recipe_id: str, state: bool):
 async def get_recipes(user_id: str):
     try:
         # Check if the user exists in the 'collection'
-        user_data = collection.find_one({"User": user_id})
+        user_data = collectionUsers.find_one({"User": user_id})
         if not user_data:
             raise HTTPException(status_code=404, detail=f"User {user_id} not found")
 
