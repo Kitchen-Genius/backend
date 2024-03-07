@@ -1,7 +1,6 @@
 from fastapi import APIRouter, Depends, Body, HTTPException
-from fastapi.responses import JSONResponse
-import traceback
 from pymongo import MongoClient
+import logging
 from app.services import spoonacular as spoonacular_service
 from app.services.recipe_processing import process_and_save_recipes, prepare_recipe_search_criteria, get_cached_recipe_by_id
 from app.utils.validations import validate_diet, validate_type, validate_intolerances
@@ -216,7 +215,5 @@ async def search_recipes(request_body: RecipeSearchRequest):
         )
         return recipes
     except Exception as e:
-        traceback_str = ''.join(traceback.format_tb(e.__traceback__))
-        error_msg = f"Unhandled exception: {e}\nTraceback:\n{traceback_str}"
-        print(error_msg)  # Log to console or consider logging to a file or logging service
-        return JSONResponse(status_code=500, content={"detail": "An internal error occurred."})
+        logging.error(f"Failed to process and save recipes: {str(e)}")  # Log the error for debugging
+        raise HTTPException(status_code=500, detail=str(e) or "An internal error occurred.")
