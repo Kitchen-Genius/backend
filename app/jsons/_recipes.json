@@ -1,0 +1,972 @@
+{
+    "results": [
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": true,
+            "cheap": false,
+            "veryPopular": true,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 11,
+            "gaps": "no",
+            "preparationMinutes": 10,
+            "cookingMinutes": 45,
+            "aggregateLikes": 1866,
+            "healthScore": 100,
+            "creditsText": "pinkwhen.com",
+            "sourceName": "pinkwhen.com",
+            "pricePerServing": 300.45,
+            "id": 715415,
+            "title": "Red Lentil Soup with Chicken and Turnips",
+            "readyInMinutes": 55,
+            "servings": 8,
+            "sourceUrl": "http://www.pinkwhen.com/red-lentil-soup-with-chicken-and-turnips/",
+            "image": "https://spoonacular.com/recipeImages/715415-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Red Lentil Soup with Chicken and Turnips might be a good recipe to expand your main course repertoire. This recipe serves 8 and costs $3.0 per serving. One serving contains <b>477 calories</b>, <b>27g of protein</b>, and <b>20g of fat</b>. It is brought to you by Pink When. 1866 people have tried and liked this recipe. It can be enjoyed any time, but it is especially good for <b>Autumn</b>. From preparation to the plate, this recipe takes approximately <b>55 minutes</b>. It is a good option if you're following a <b>gluten free and dairy free</b> diet. Head to the store and pick up salt and pepper, canned tomatoes, flat leaf parsley, and a few other things to make it today. Overall, this recipe earns a <b>spectacular spoonacular score of 99%</b>. If you like this recipe, you might also like recipes such as <a href=\"https://spoonacular.com/recipes/red-lentil-and-chicken-soup-682185\">Red Lentil and Chicken Soup</a>, <a href=\"https://spoonacular.com/recipes/red-lentil-and-chicken-soup-1058971\">Red Lentil and Chicken Soup</a>, and <a href=\"https://spoonacular.com/recipes/red-lentil-soup-34121\">Red-Lentil Soup</a>.",
+            "cuisines": [],
+            "dishTypes": [
+                "lunch",
+                "soup",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free"
+            ],
+            "occasions": [
+                "fall",
+                "winter"
+            ],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "To a large dutch oven or soup pot, heat the olive oil over medium heat.",
+                            "ingredients": [
+                                {
+                                    "id": 4053,
+                                    "name": "olive oil",
+                                    "localizedName": "olive oil",
+                                    "image": "olive-oil.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "soup",
+                                    "localizedName": "soup",
+                                    "image": ""
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404667,
+                                    "name": "dutch oven",
+                                    "localizedName": "dutch oven",
+                                    "image": "dutch-oven.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 2,
+                            "step": "Add the onion, carrots and celery and cook for 8-10 minutes or until tender, stirring occasionally.",
+                            "ingredients": [
+                                {
+                                    "id": 11124,
+                                    "name": "carrot",
+                                    "localizedName": "carrot",
+                                    "image": "sliced-carrot.png"
+                                },
+                                {
+                                    "id": 11143,
+                                    "name": "celery",
+                                    "localizedName": "celery",
+                                    "image": "celery.jpg"
+                                },
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 10,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 3,
+                            "step": "Add the garlic and cook for an additional 2 minutes, or until fragrant. Season conservatively with a pinch of salt and black pepper.To the pot, add the tomatoes, turnip and red lentils. Stir to combine. Stir in the vegetable stock and increase the heat on the stove to high. Bring the soup to a boil and then reduce to a simmer. Simmer for 20 minutes or until the turnips are tender and the lentils are cooked through.",
+                            "ingredients": [
+                                {
+                                    "id": 1102047,
+                                    "name": "salt and pepper",
+                                    "localizedName": "salt and pepper",
+                                    "image": "salt-and-pepper.jpg"
+                                },
+                                {
+                                    "id": 6615,
+                                    "name": "vegetable stock",
+                                    "localizedName": "vegetable stock",
+                                    "image": "chicken-broth.png"
+                                },
+                                {
+                                    "id": 10016069,
+                                    "name": "red lentils",
+                                    "localizedName": "red lentils",
+                                    "image": "red-lentils.png"
+                                },
+                                {
+                                    "id": 11529,
+                                    "name": "tomato",
+                                    "localizedName": "tomato",
+                                    "image": "tomato.png"
+                                },
+                                {
+                                    "id": 10316069,
+                                    "name": "lentils",
+                                    "localizedName": "lentils",
+                                    "image": "lentils-brown.jpg"
+                                },
+                                {
+                                    "id": 11564,
+                                    "name": "turnip",
+                                    "localizedName": "turnip",
+                                    "image": "turnips.png"
+                                },
+                                {
+                                    "id": 11215,
+                                    "name": "garlic",
+                                    "localizedName": "garlic",
+                                    "image": "garlic.png"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "soup",
+                                    "localizedName": "soup",
+                                    "image": ""
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404794,
+                                    "name": "stove",
+                                    "localizedName": "stove",
+                                    "image": "oven.jpg"
+                                },
+                                {
+                                    "id": 404752,
+                                    "name": "pot",
+                                    "localizedName": "pot",
+                                    "image": "stock-pot.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 22,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 4,
+                            "step": "Add the chicken breast and parsley. Cook for an additional 5 minutes. Adjust seasoning to taste.",
+                            "ingredients": [
+                                {
+                                    "id": 5062,
+                                    "name": "chicken breast",
+                                    "localizedName": "chicken breast",
+                                    "image": "chicken-breasts.png"
+                                },
+                                {
+                                    "id": 1042027,
+                                    "name": "seasoning",
+                                    "localizedName": "seasoning",
+                                    "image": "seasoning.png"
+                                },
+                                {
+                                    "id": 11297,
+                                    "name": "parsley",
+                                    "localizedName": "parsley",
+                                    "image": "parsley.jpg"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 5,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 5,
+                            "step": "Serve the soup immediately garnished with fresh parsley and any additional toppings. Enjoy!",
+                            "ingredients": [
+                                {
+                                    "id": 10511297,
+                                    "name": "fresh parsley",
+                                    "localizedName": "fresh parsley",
+                                    "image": "parsley.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "soup",
+                                    "localizedName": "soup",
+                                    "image": ""
+                                }
+                            ],
+                            "equipment": []
+                        }
+                    ]
+                }
+            ],
+            "spoonacularScore": 99.40465545654297,
+            "spoonacularSourceUrl": "https://spoonacular.com/red-lentil-soup-with-chicken-and-turnips-715415"
+        },
+        {
+            "vegetarian": true,
+            "vegan": true,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": true,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 9,
+            "gaps": "no",
+            "preparationMinutes": -1,
+            "cookingMinutes": -1,
+            "aggregateLikes": 53,
+            "healthScore": 96,
+            "creditsText": "blogspot.com",
+            "sourceName": "blogspot.com",
+            "pricePerServing": 168.43,
+            "id": 782601,
+            "title": "Red Kidney Bean Jambalaya",
+            "readyInMinutes": 45,
+            "servings": 6,
+            "sourceUrl": "http://foodandspice.blogspot.com/2016/05/red-kidney-bean-jambalaya.html",
+            "image": "https://spoonacular.com/recipeImages/782601-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Red Kidney Bean Jambalayan is a main course that serves 6. One portion of this dish contains approximately <b>18g of protein</b>, <b>6g of fat</b>, and a total of <b>393 calories</b>. For <b>$1.68 per serving</b>, this recipe <b>covers 33%</b> of your daily requirements of vitamins and minerals. 53 people were glad they tried this recipe. A mixture of vegetable stock, tomatoes, onion, and a handful of other ingredients are all it takes to make this recipe so flavorful. It is a good option if you're following a <b>gluten free, dairy free, lacto ovo vegetarian, and vegan</b> diet. This recipe is typical of Cajun cuisine. It is brought to you by foodandspice.blogspot.com. From preparation to the plate, this recipe takes roughly <b>45 minutes</b>. Overall, this recipe earns a <b>tremendous spoonacular score of 99%</b>. Users who liked this recipe also liked <a href=\"https://spoonacular.com/recipes/red-kidney-bean-jambalaya-1407231\">Red Kidney Bean Jambalaya</a>, <a href=\"https://spoonacular.com/recipes/red-kidney-bean-salad-94525\">Red Kidney Bean Salad</a>, and <a href=\"https://spoonacular.com/recipes/red-kidney-bean-curry-80686\">Red Kidney Bean Curry</a>.",
+            "cuisines": [
+                "Creole",
+                "Cajun"
+            ],
+            "dishTypes": [
+                "lunch",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free",
+                "lacto ovo vegetarian",
+                "vegan"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Rinse the kidney beans and brown rice separately. Cover the kidney beans with water and soak for 8 hours or overnight. In a separate bowl, cover the brown rice with water and soak for 8 hours or overnight.",
+                            "ingredients": [
+                                {
+                                    "id": 16033,
+                                    "name": "kidney beans",
+                                    "localizedName": "kidney beans",
+                                    "image": "kidney-beans.jpg"
+                                },
+                                {
+                                    "id": 20040,
+                                    "name": "brown rice",
+                                    "localizedName": "brown rice",
+                                    "image": "uncooked-brown-rice.png"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404783,
+                                    "name": "bowl",
+                                    "localizedName": "bowl",
+                                    "image": "bowl.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 960,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 2,
+                            "step": "Drain and rinse the kidney beans, then transfer to a medium saucepan and cover with fresh water. Bring to a boil, reduce heat to medium-low, cover, and simmer for 1 hour or until just tender but not falling apart.",
+                            "ingredients": [
+                                {
+                                    "id": 16033,
+                                    "name": "kidney beans",
+                                    "localizedName": "kidney beans",
+                                    "image": "kidney-beans.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404669,
+                                    "name": "sauce pan",
+                                    "localizedName": "sauce pan",
+                                    "image": "sauce-pan.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 60,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 3,
+                            "step": "Drain and set aside.",
+                            "ingredients": [],
+                            "equipment": []
+                        },
+                        {
+                            "number": 4,
+                            "step": "Heat the oil in a large saucepan over medium heat. When hot, add the onion and saut for 5 minutes. Now add the garlic, carrots, celery and green beans, and stir for another 5 minutes. Next add the tomatoes, red pepper, eggplant, sage, thyme, marjoram and celery seed, and continue to stir for another few minutes.",
+                            "ingredients": [
+                                {
+                                    "id": 2007,
+                                    "name": "celery seed",
+                                    "localizedName": "celery seed",
+                                    "image": "celery-seed.jpg"
+                                },
+                                {
+                                    "id": 11052,
+                                    "name": "green beans",
+                                    "localizedName": "green beans",
+                                    "image": "green-beans-or-string-beans.jpg"
+                                },
+                                {
+                                    "id": 11821,
+                                    "name": "red pepper",
+                                    "localizedName": "red pepper",
+                                    "image": "red-pepper.jpg"
+                                },
+                                {
+                                    "id": 11209,
+                                    "name": "eggplant",
+                                    "localizedName": "eggplant",
+                                    "image": "eggplant.png"
+                                },
+                                {
+                                    "id": 2023,
+                                    "name": "marjoram",
+                                    "localizedName": "marjoram",
+                                    "image": "marjoram.jpg"
+                                },
+                                {
+                                    "id": 11529,
+                                    "name": "tomato",
+                                    "localizedName": "tomato",
+                                    "image": "tomato.png"
+                                },
+                                {
+                                    "id": 11124,
+                                    "name": "carrot",
+                                    "localizedName": "carrot",
+                                    "image": "sliced-carrot.png"
+                                },
+                                {
+                                    "id": 11143,
+                                    "name": "celery",
+                                    "localizedName": "celery",
+                                    "image": "celery.jpg"
+                                },
+                                {
+                                    "id": 11215,
+                                    "name": "garlic",
+                                    "localizedName": "garlic",
+                                    "image": "garlic.png"
+                                },
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                },
+                                {
+                                    "id": 2049,
+                                    "name": "thyme",
+                                    "localizedName": "thyme",
+                                    "image": "thyme.jpg"
+                                },
+                                {
+                                    "id": 99226,
+                                    "name": "sage",
+                                    "localizedName": "sage",
+                                    "image": "fresh-sage.png"
+                                },
+                                {
+                                    "id": 4582,
+                                    "name": "cooking oil",
+                                    "localizedName": "cooking oil",
+                                    "image": "vegetable-oil.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404669,
+                                    "name": "sauce pan",
+                                    "localizedName": "sauce pan",
+                                    "image": "sauce-pan.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 10,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 5,
+                            "step": "Pour in the vegetable stock, liquid smoke, rice and the cooked kidney beans. Bring to a boil, reduce heat to medium low, cover, and cook, stirring occasionally, for 45 minutes or until the rice is tender.",
+                            "ingredients": [
+                                {
+                                    "id": 6615,
+                                    "name": "vegetable stock",
+                                    "localizedName": "vegetable stock",
+                                    "image": "chicken-broth.png"
+                                },
+                                {
+                                    "id": 16033,
+                                    "name": "kidney beans",
+                                    "localizedName": "kidney beans",
+                                    "image": "kidney-beans.jpg"
+                                },
+                                {
+                                    "id": 93627,
+                                    "name": "liquid smoke",
+                                    "localizedName": "liquid smoke",
+                                    "image": "dark-sauce.jpg"
+                                },
+                                {
+                                    "id": 20444,
+                                    "name": "rice",
+                                    "localizedName": "rice",
+                                    "image": "uncooked-white-rice.png"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 45,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 6,
+                            "step": "Add water as necessary if the stew becomes too dry.Season with sriracha, salt and pepper, and taste for seasoning  add more liquid smoke, sriracha, salt, pepper or herbs as desired.",
+                            "ingredients": [
+                                {
+                                    "id": 1102047,
+                                    "name": "salt and pepper",
+                                    "localizedName": "salt and pepper",
+                                    "image": "salt-and-pepper.jpg"
+                                },
+                                {
+                                    "id": 93627,
+                                    "name": "liquid smoke",
+                                    "localizedName": "liquid smoke",
+                                    "image": "dark-sauce.jpg"
+                                },
+                                {
+                                    "id": 1042027,
+                                    "name": "seasoning",
+                                    "localizedName": "seasoning",
+                                    "image": "seasoning.png"
+                                },
+                                {
+                                    "id": 1016168,
+                                    "name": "sriracha",
+                                    "localizedName": "sriracha",
+                                    "image": "hot-sauce-or-tabasco.png"
+                                },
+                                {
+                                    "id": 1002030,
+                                    "name": "pepper",
+                                    "localizedName": "pepper",
+                                    "image": "pepper.jpg"
+                                },
+                                {
+                                    "id": 1002044,
+                                    "name": "herbs",
+                                    "localizedName": "herbs",
+                                    "image": "mixed-fresh-herbs.jpg"
+                                },
+                                {
+                                    "id": 14412,
+                                    "name": "water",
+                                    "localizedName": "water",
+                                    "image": "water.png"
+                                },
+                                {
+                                    "id": 2047,
+                                    "name": "salt",
+                                    "localizedName": "salt",
+                                    "image": "salt.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "stew",
+                                    "localizedName": "stew",
+                                    "image": ""
+                                }
+                            ],
+                            "equipment": []
+                        }
+                    ]
+                }
+            ],
+            "spoonacularScore": 98.758544921875,
+            "spoonacularSourceUrl": "https://spoonacular.com/red-kidney-bean-jambalaya-782601"
+        },
+        {
+            "vegetarian": true,
+            "vegan": true,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": true,
+            "cheap": false,
+            "veryPopular": true,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 10,
+            "gaps": "no",
+            "preparationMinutes": -1,
+            "cookingMinutes": -1,
+            "aggregateLikes": 471,
+            "healthScore": 60,
+            "creditsText": "blogspot.com",
+            "sourceName": "blogspot.com",
+            "pricePerServing": 106.02,
+            "id": 716627,
+            "title": "Easy Homemade Rice and Beans",
+            "readyInMinutes": 35,
+            "servings": 2,
+            "sourceUrl": "http://cooking2perfection.blogspot.com/2012/11/easy-homemade-rice-and-beans.html",
+            "image": "https://spoonacular.com/recipeImages/716627-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Easy Homemade Rice and Beans is a main course that serves 2. One serving contains <b>446 calories</b>, <b>19g of protein</b>, and <b>4g of fat</b>. For <b>$1.06 per serving</b>, this recipe <b>covers 26%</b> of your daily requirements of vitamins and minerals. A mixture of optional: of hot sauce, canned tomatoes, water, and a handful of other ingredients are all it takes to make this recipe so yummy. This recipe from cooking2perfection.blogspot.com has 471 fans. It is a good option if you're following a <b>gluten free, dairy free, lacto ovo vegetarian, and vegan</b> diet. From preparation to the plate, this recipe takes around <b>35 minutes</b>. Overall, this recipe earns a <b>tremendous spoonacular score of 98%</b>. <a href=\"https://spoonacular.com/recipes/easy-homemade-rice-and-beans-1311839\">Easy Homemade Rice and Beans</a>, <a href=\"https://spoonacular.com/recipes/easy-homemade-rice-and-beans-1303021\">Easy Homemade Rice and Beans</a>, and <a href=\"https://spoonacular.com/recipes/easy-homemade-rice-and-beans-1230117\">Easy Homemade Rice and Beans</a> are very similar to this recipe.",
+            "cuisines": [],
+            "dishTypes": [
+                "side dish",
+                "lunch",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free",
+                "lacto ovo vegetarian",
+                "vegan"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Heat the olive oil in a large pot over medium heat.",
+                            "ingredients": [
+                                {
+                                    "id": 4053,
+                                    "name": "olive oil",
+                                    "localizedName": "olive oil",
+                                    "image": "olive-oil.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404752,
+                                    "name": "pot",
+                                    "localizedName": "pot",
+                                    "image": "stock-pot.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 2,
+                            "step": "Add onions and saute until soft, or for about 5 minutes.",
+                            "ingredients": [
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 5,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 3,
+                            "step": "Add all other remaining ingredients and stir together. Increase the heat to medium high and bring to a boil. Cover and reduce heat to medium low so that the mixture simmers. Cook for 15-20 minutes, or until rice is fluffy and liquid is absorbed.*",
+                            "ingredients": [
+                                {
+                                    "id": 20444,
+                                    "name": "rice",
+                                    "localizedName": "rice",
+                                    "image": "uncooked-white-rice.png"
+                                }
+                            ],
+                            "equipment": [],
+                            "length": {
+                                "number": 20,
+                                "unit": "minutes"
+                            }
+                        },
+                        {
+                            "number": 4,
+                            "step": "Serve with salsa, cheese, and sour cream.",
+                            "ingredients": [
+                                {
+                                    "id": 1056,
+                                    "name": "sour cream",
+                                    "localizedName": "sour cream",
+                                    "image": "sour-cream.jpg"
+                                },
+                                {
+                                    "id": 1041009,
+                                    "name": "cheese",
+                                    "localizedName": "cheese",
+                                    "image": "cheddar-cheese.png"
+                                },
+                                {
+                                    "id": 6164,
+                                    "name": "salsa",
+                                    "localizedName": "salsa",
+                                    "image": "salsa.png"
+                                }
+                            ],
+                            "equipment": []
+                        }
+                    ]
+                }
+            ],
+            "spoonacularScore": 98.55448913574219,
+            "spoonacularSourceUrl": "https://spoonacular.com/easy-homemade-rice-and-beans-716627"
+        },
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": false,
+            "dairyFree": false,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": true,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 6,
+            "gaps": "no",
+            "preparationMinutes": 5,
+            "cookingMinutes": 10,
+            "aggregateLikes": 910,
+            "healthScore": 39,
+            "creditsText": "Jen West",
+            "sourceName": "Pink When",
+            "pricePerServing": 183.99,
+            "id": 715495,
+            "title": "Turkey Tomato Cheese Pizza",
+            "readyInMinutes": 15,
+            "servings": 6,
+            "sourceUrl": "http://www.pinkwhen.com/turkey-tomato-cheese-pizza-recipe/",
+            "image": "https://spoonacular.com/recipeImages/715495-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Turkey Tomato Cheese Pizza might be just the <b>Mediterranean</b> recipe you are searching for. For <b>$1.84 per serving</b>, this recipe <b>covers 23%</b> of your daily requirements of vitamins and minerals. This hor d'oeuvre has <b>221 calories</b>, <b>10g of protein</b>, and <b>8g of fat</b> per serving. This recipe serves 6. Head to the store and pick up bell pepper, parsley, onion, and a few other things to make it today. This recipe from Pink When has 910 fans. From preparation to the plate, this recipe takes around <b>15 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 97%</b>. This score is outstanding. Users who liked this recipe also liked <a href=\"https://spoonacular.com/recipes/turkey-tomato-pizza-430522\">Turkey Tomato Pizza</a>, <a href=\"https://spoonacular.com/recipes/tomato-cheese-pizza-430570\">Tomato Cheese Pizza</a>, and <a href=\"https://spoonacular.com/recipes/cheese-tomato-pizza-696636\">Cheese & Tomato Pizza</a>.",
+            "cuisines": [
+                "Mediterranean",
+                "Italian",
+                "European"
+            ],
+            "dishTypes": [
+                "antipasti",
+                "starter",
+                "snack",
+                "appetizer",
+                "antipasto",
+                "hor d'oeuvre"
+            ],
+            "diets": [],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Heat up your grill to 450 degrees.Start off with your whole wheat crust and spread the tomato sauce evenly over the top.",
+                            "ingredients": [
+                                {
+                                    "id": 11549,
+                                    "name": "tomato sauce",
+                                    "localizedName": "tomato sauce",
+                                    "image": "tomato-sauce-or-pasta-sauce.jpg"
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "spread",
+                                    "localizedName": "spread",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "crust",
+                                    "localizedName": "crust",
+                                    "image": ""
+                                },
+                                {
+                                    "id": 0,
+                                    "name": "wheat",
+                                    "localizedName": "wheat",
+                                    "image": ""
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404706,
+                                    "name": "grill",
+                                    "localizedName": "grill",
+                                    "image": "grill.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 2,
+                            "step": "Add a little cheese, bell pepper, onion, turkey and create a layer.Top with another layer of cheese, turkey, tomato, bell pepper, onion.",
+                            "ingredients": [
+                                {
+                                    "id": 10211821,
+                                    "name": "bell pepper",
+                                    "localizedName": "bell pepper",
+                                    "image": "bell-pepper-orange.png"
+                                },
+                                {
+                                    "id": 1041009,
+                                    "name": "cheese",
+                                    "localizedName": "cheese",
+                                    "image": "cheddar-cheese.png"
+                                },
+                                {
+                                    "id": 11529,
+                                    "name": "tomato",
+                                    "localizedName": "tomato",
+                                    "image": "tomato.png"
+                                },
+                                {
+                                    "id": 5165,
+                                    "name": "whole turkey",
+                                    "localizedName": "whole turkey",
+                                    "image": "turkey-raw-whole.jpg"
+                                },
+                                {
+                                    "id": 11282,
+                                    "name": "onion",
+                                    "localizedName": "onion",
+                                    "image": "brown-onion.png"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 3,
+                            "step": "Add another layer of cheese, and then sprinkle with pepper.",
+                            "ingredients": [
+                                {
+                                    "id": 1041009,
+                                    "name": "cheese",
+                                    "localizedName": "cheese",
+                                    "image": "cheddar-cheese.png"
+                                },
+                                {
+                                    "id": 1002030,
+                                    "name": "pepper",
+                                    "localizedName": "pepper",
+                                    "image": "pepper.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 4,
+                            "step": "Place the pizza on a ceramic grill plate and place into the grill.Grill for 6-10 minutes, or until cooked as desired.Slice, and serve immediately.",
+                            "ingredients": [],
+                            "equipment": [
+                                {
+                                    "id": 404706,
+                                    "name": "grill",
+                                    "localizedName": "grill",
+                                    "image": "grill.jpg"
+                                }
+                            ],
+                            "length": {
+                                "number": 10,
+                                "unit": "minutes"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "spoonacularScore": 98.31492614746094,
+            "spoonacularSourceUrl": "https://spoonacular.com/turkey-tomato-cheese-pizza-715495"
+        },
+        {
+            "vegetarian": true,
+            "vegan": true,
+            "glutenFree": true,
+            "dairyFree": true,
+            "veryHealthy": true,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 9,
+            "gaps": "no",
+            "preparationMinutes": -1,
+            "cookingMinutes": -1,
+            "aggregateLikes": 44,
+            "healthScore": 83,
+            "creditsText": "blogspot.com",
+            "sourceName": "blogspot.com",
+            "pricePerServing": 112.68,
+            "id": 794349,
+            "title": "Broccoli and Chickpea Rice Salad",
+            "readyInMinutes": 45,
+            "servings": 6,
+            "sourceUrl": "http://foodandspice.blogspot.com/2016/07/broccoli-and-chickpea-rice-salad.html",
+            "image": "https://spoonacular.com/recipeImages/794349-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Broccoli and Chickpea Rice Salad takes roughly <b>45 minutes</b> from beginning to end. Watching your figure? This gluten free, dairy free, lacto ovo vegetarian, and vegan recipe has <b>355 calories</b>, <b>15g of protein</b>, and <b>10g of fat</b> per serving. This recipe serves 6. For <b>$1.13 per serving</b>, this recipe <b>covers 30%</b> of your daily requirements of vitamins and minerals. It works well as a main course. 44 people were glad they tried this recipe. It is brought to you by foodandspice.blogspot.com. A mixture of ground pepper, broccoli florets, olive oil, and a handful of other ingredients are all it takes to make this recipe so tasty. With a spoonacular <b>score of 99%</b>, this dish is tremendous. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/broccoli-and-chickpea-rice-salad-1380823\">Broccoli and Chickpea Rice Salad</a>, <a href=\"https://spoonacular.com/recipes/broccoli-and-chickpea-rice-salad-1401089\">Broccoli and Chickpea Rice Salad</a>, and <a href=\"https://spoonacular.com/recipes/broccoli-and-chickpea-rice-salad-1287405\">Broccoli and Chickpea Rice Salad</a>.",
+            "cuisines": [],
+            "dishTypes": [
+                "side dish",
+                "lunch",
+                "main course",
+                "salad",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [
+                "gluten free",
+                "dairy free",
+                "lacto ovo vegetarian",
+                "vegan"
+            ],
+            "occasions": [],
+            "analyzedInstructions": [
+                {
+                    "name": "",
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "In a large skillet, heat the oil over medium heat.",
+                            "ingredients": [
+                                {
+                                    "id": 4582,
+                                    "name": "cooking oil",
+                                    "localizedName": "cooking oil",
+                                    "image": "vegetable-oil.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404645,
+                                    "name": "frying pan",
+                                    "localizedName": "frying pan",
+                                    "image": "pan.png"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 2,
+                            "step": "Add the broccoli, stir well, and cover. Cook, stirring often, until the broccoli is tender.",
+                            "ingredients": [
+                                {
+                                    "id": 11090,
+                                    "name": "broccoli",
+                                    "localizedName": "broccoli",
+                                    "image": "broccoli.jpg"
+                                }
+                            ],
+                            "equipment": []
+                        },
+                        {
+                            "number": 3,
+                            "step": "Add the broccoli to a large bowl, along with the remaining salad ingredients.To make the dressing, whisk together all of the dressing ingredients in a small bowl.",
+                            "ingredients": [
+                                {
+                                    "id": 11090,
+                                    "name": "broccoli",
+                                    "localizedName": "broccoli",
+                                    "image": "broccoli.jpg"
+                                }
+                            ],
+                            "equipment": [
+                                {
+                                    "id": 404661,
+                                    "name": "whisk",
+                                    "localizedName": "whisk",
+                                    "image": "whisk.png"
+                                },
+                                {
+                                    "id": 404783,
+                                    "name": "bowl",
+                                    "localizedName": "bowl",
+                                    "image": "bowl.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "number": 4,
+                            "step": "Pour the dressing over the salad and toss well to coat evenly. Taste for seasoning and serve.",
+                            "ingredients": [
+                                {
+                                    "id": 1042027,
+                                    "name": "seasoning",
+                                    "localizedName": "seasoning",
+                                    "image": "seasoning.png"
+                                }
+                            ],
+                            "equipment": []
+                        }
+                    ]
+                }
+            ],
+            "spoonacularScore": 98.29756927490234,
+            "spoonacularSourceUrl": "https://spoonacular.com/broccoli-and-chickpea-rice-salad-794349"
+        }
+    ],
+    "offset": 0,
+    "number": 5,
+    "totalResults": 739
+}

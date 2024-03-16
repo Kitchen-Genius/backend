@@ -8,5 +8,5 @@ database = client.KitchenGenius
 
 # collections:
 ingredients_collection = database.Ingredients
-saved_recipies = database.saved_recipies
+saved_recipes = database.saved_recipes
 users = database.users

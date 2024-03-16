@@ -11,6 +11,7 @@ load_dotenv()
 API_KEY = os.getenv("SPOONACULAR_API_KEY")
 
 ## TODO allow searching with empty diet, type and intolerances: ##
+## done! ##
 async def search_recipes(diet='', includeIngredients='', type='', intolerances='', instructionsRequired=True, number=1, addRecipeInformation=True, maxReadyTime=20):
     if diet and not validate_params('diets', diet, 'diets'):
         return {"error": "Invalid diet parameter"}

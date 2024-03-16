@@ -1,0 +1,764 @@
+[
+    {
+        "_id": "65f5f8bac40018da530a4807",
+        "vegetarian": false,
+        "vegan": false,
+        "glutenFree": true,
+        "dairyFree": true,
+        "veryHealthy": true,
+        "readyInMinutes": 55,
+        "servings": 8,
+        "id": 715415,
+        "title": "Red Lentil Soup with Chicken and Turnips",
+        "image": "https://spoonacular.com/recipeImages/715415-312x231.jpg",
+        "analyzedInstructions": [
+            {
+                "steps": [
+                    {
+                        "step": "To a large dutch oven or soup pot, heat the olive oil over medium heat.",
+                        "number": 1
+                    },
+                    {
+                        "step": "Add the onion, carrots and celery and cook for 8-10 minutes or until tender, stirring occasionally.",
+                        "number": 2
+                    },
+                    {
+                        "step": "Add the garlic and cook for an additional 2 minutes, or until fragrant. Season conservatively with a pinch of salt and black pepper.To the pot, add the tomatoes, turnip and red lentils. Stir to combine. Stir in the vegetable stock and increase the heat on the stove to high. Bring the soup to a boil and then reduce to a simmer. Simmer for 20 minutes or until the turnips are tender and the lentils are cooked through.",
+                        "number": 3
+                    },
+                    {
+                        "step": "Add the chicken breast and parsley. Cook for an additional 5 minutes. Adjust seasoning to taste.",
+                        "number": 4
+                    },
+                    {
+                        "step": "Serve the soup immediately garnished with fresh parsley and any additional toppings. Enjoy!",
+                        "number": 5
+                    }
+                ]
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "diced additional toppings: avocado",
+                "image": "avocado.jpg",
+                "amount": {
+                    "value": 8.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "diced carrots",
+                "image": "sliced-carrot.png",
+                "amount": {
+                    "value": 3.0,
+                    "unit": "medium"
+                }
+            },
+            {
+                "name": "diced celery stalks",
+                "image": "celery.jpg",
+                "amount": {
+                    "value": 3.0,
+                    "unit": ""
+                }
+            },
+            {
+                "name": "shredded chicken breast",
+                "image": "cooked-chicken-breast.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "cups"
+                }
+            },
+            {
+                "name": "italian flat leaf parsley",
+                "image": "parsley.jpg",
+                "amount": {
+                    "value": 0.5,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "garlic",
+                "image": "garlic.png",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "cloves"
+                }
+            },
+            {
+                "name": "olive oil",
+                "image": "olive-oil.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "Tbsps"
+                }
+            },
+            {
+                "name": "canned tomatoes",
+                "image": "tomatoes-canned.png",
+                "amount": {
+                    "value": 28.0,
+                    "unit": "ounce"
+                }
+            },
+            {
+                "name": "red dried lentils",
+                "image": "red-lentils.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "cups"
+                }
+            },
+            {
+                "name": "black salt and pepper",
+                "image": "salt-and-pepper.jpg",
+                "amount": {
+                    "value": 8.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "diced turnip",
+                "image": "turnips.png",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "large"
+                }
+            },
+            {
+                "name": "vegetable stock",
+                "image": "chicken-broth.png",
+                "amount": {
+                    "value": 8.0,
+                    "unit": "cups"
+                }
+            },
+            {
+                "name": "yellow diced onion",
+                "image": "brown-onion.png",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "medium"
+                }
+            }
+        ],
+        "Calories": 477.24
+    },
+    {
+        "_id": "65f5f8bcc40018da530a4809",
+        "vegetarian": true,
+        "vegan": true,
+        "glutenFree": true,
+        "dairyFree": true,
+        "veryHealthy": true,
+        "readyInMinutes": 45,
+        "servings": 6,
+        "id": 782601,
+        "title": "Red Kidney Bean Jambalaya",
+        "image": "https://spoonacular.com/recipeImages/782601-312x231.jpg",
+        "analyzedInstructions": [
+            {
+                "steps": [
+                    {
+                        "step": "Rinse the kidney beans and brown rice separately. Cover the kidney beans with water and soak for 8 hours or overnight. In a separate bowl, cover the brown rice with water and soak for 8 hours or overnight.",
+                        "number": 1
+                    },
+                    {
+                        "step": "Drain and rinse the kidney beans, then transfer to a medium saucepan and cover with fresh water. Bring to a boil, reduce heat to medium-low, cover, and simmer for 1 hour or until just tender but not falling apart.",
+                        "number": 2
+                    },
+                    {
+                        "step": "Drain and set aside.",
+                        "number": 3
+                    },
+                    {
+                        "step": "Heat the oil in a large saucepan over medium heat. When hot, add the onion and saut for 5 minutes. Now add the garlic, carrots, celery and green beans, and stir for another 5 minutes. Next add the tomatoes, red pepper, eggplant, sage, thyme, marjoram and celery seed, and continue to stir for another few minutes.",
+                        "number": 4
+                    },
+                    {
+                        "step": "Pour in the vegetable stock, liquid smoke, rice and the cooked kidney beans. Bring to a boil, reduce heat to medium low, cover, and cook, stirring occasionally, for 45 minutes or until the rice is tender.",
+                        "number": 5
+                    },
+                    {
+                        "step": "Add water as necessary if the stew becomes too dry.Season with sriracha, salt and pepper, and taste for seasoning  add more liquid smoke, sriracha, salt, pepper or herbs as desired.",
+                        "number": 6
+                    }
+                ]
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "cooked dried brown rice",
+                "image": "rice-brown-cooked.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "cups"
+                }
+            },
+            {
+                "name": "carrots",
+                "image": "sliced-carrot.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "medium"
+                }
+            },
+            {
+                "name": "celery",
+                "image": "celery.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "stalks"
+                }
+            },
+            {
+                "name": "celery seed",
+                "image": "celery-seed.jpg",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "tsp"
+                }
+            },
+            {
+                "name": "cooked dried kidney beans",
+                "image": "kidney-beans.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "cups"
+                }
+            },
+            {
+                "name": "dried marjoram",
+                "image": "marjoram.jpg",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "tsp"
+                }
+            },
+            {
+                "name": "dried thyme",
+                "image": "thyme.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "eggplant",
+                "image": "eggplant.png",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "medium"
+                }
+            },
+            {
+                "name": "garlic",
+                "image": "garlic.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "cloves"
+                }
+            },
+            {
+                "name": "green beans",
+                "image": "green-beans-or-string-beans.jpg",
+                "amount": {
+                    "value": 3.0,
+                    "unit": "handfuls"
+                }
+            },
+            {
+                "name": "black fresh ground pepper",
+                "image": "pepper.jpg",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "ground sage",
+                "image": "dried-sage.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "liquid smoke",
+                "image": "dark-sauce.jpg",
+                "amount": {
+                    "value": 0.5,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "olive oil",
+                "image": "olive-oil.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "Tbsps"
+                }
+            },
+            {
+                "name": "red bell pepper",
+                "image": "red-pepper.jpg",
+                "amount": {
+                    "value": 1.0,
+                    "unit": ""
+                }
+            },
+            {
+                "name": "red white diced onion",
+                "image": "brown-onion.png",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "small"
+                }
+            },
+            {
+                "name": "sea salt",
+                "image": "salt.jpg",
+                "amount": {
+                    "value": 1.5,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "sriracha",
+                "image": "hot-sauce-or-tabasco.png",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "tsp"
+                }
+            },
+            {
+                "name": "diced tomatoes",
+                "image": "tomato.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "medium"
+                }
+            },
+            {
+                "name": "vegetable stock",
+                "image": "chicken-broth.png",
+                "amount": {
+                    "value": 3.0,
+                    "unit": "cups"
+                }
+            }
+        ],
+        "Calories": 392.8
+    },
+    {
+        "vegetarian": true,
+        "vegan": true,
+        "glutenFree": true,
+        "dairyFree": true,
+        "veryHealthy": true,
+        "readyInMinutes": 35,
+        "servings": 2,
+        "id": 716627,
+        "title": "Easy Homemade Rice and Beans",
+        "image": "https://spoonacular.com/recipeImages/716627-312x231.jpg",
+        "analyzedInstructions": [
+            {
+                "steps": [
+                    {
+                        "step": "Heat the olive oil in a large pot over medium heat.",
+                        "number": 1
+                    },
+                    {
+                        "step": "Add onions and saute until soft, or for about 5 minutes.",
+                        "number": 2
+                    },
+                    {
+                        "step": "Add all other remaining ingredients and stir together. Increase the heat to medium high and bring to a boil. Cover and reduce heat to medium low so that the mixture simmers. Cook for 15-20 minutes, or until rice is fluffy and liquid is absorbed.*",
+                        "number": 3
+                    },
+                    {
+                        "step": "Serve with salsa, cheese, and sour cream.",
+                        "number": 4
+                    }
+                ]
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "canned black beans",
+                "image": "black-beans.jpg",
+                "amount": {
+                    "value": 15.0,
+                    "unit": "ounce"
+                }
+            },
+            {
+                "name": "diced canned tomatoes",
+                "image": "tomatoes-canned.png",
+                "amount": {
+                    "value": 10.0,
+                    "unit": "ounce"
+                }
+            },
+            {
+                "name": "chili powder",
+                "image": "chili-powder.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "cumin",
+                "image": "ground-cumin.jpg",
+                "amount": {
+                    "value": 0.5,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "black ground pepper",
+                "image": "pepper.jpg",
+                "amount": {
+                    "value": 0.25,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "optional: of hot sauce",
+                "image": "hot-sauce-or-tabasco.png",
+                "amount": {
+                    "value": 4.0,
+                    "unit": "dashes"
+                }
+            },
+            {
+                "name": "olive oil",
+                "image": "olive-oil.jpg",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "tsp"
+                }
+            },
+            {
+                "name": "onion",
+                "image": "brown-onion.png",
+                "amount": {
+                    "value": 0.25,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "rice",
+                "image": "uncooked-white-rice.png",
+                "amount": {
+                    "value": 0.5,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "water",
+                "image": "water.png",
+                "amount": {
+                    "value": 3.0,
+                    "unit": "Tbsps"
+                }
+            }
+        ],
+        "Calories": 445.69,
+        "_id": "65f5fbf7786a4fc06f798852"
+    },
+    {
+        "vegetarian": false,
+        "vegan": false,
+        "glutenFree": false,
+        "dairyFree": false,
+        "veryHealthy": false,
+        "readyInMinutes": 15,
+        "servings": 6,
+        "id": 715495,
+        "title": "Turkey Tomato Cheese Pizza",
+        "image": "https://spoonacular.com/recipeImages/715495-312x231.jpg",
+        "analyzedInstructions": [
+            {
+                "steps": [
+                    {
+                        "step": "Heat up your grill to 450 degrees.Start off with your whole wheat crust and spread the tomato sauce evenly over the top.",
+                        "number": 1
+                    },
+                    {
+                        "step": "Add a little cheese, bell pepper, onion, turkey and create a layer.Top with another layer of cheese, turkey, tomato, bell pepper, onion.",
+                        "number": 2
+                    },
+                    {
+                        "step": "Add another layer of cheese, and then sprinkle with pepper.",
+                        "number": 3
+                    },
+                    {
+                        "step": "Place the pizza on a ceramic grill plate and place into the grill.Grill for 6-10 minutes, or until cooked as desired.Slice, and serve immediately.",
+                        "number": 4
+                    }
+                ]
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "green bell pepper",
+                "image": "green-pepper.jpg",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "parsley",
+                "image": "parsley.jpg",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "bell pepper",
+                "image": "yellow-bell-pepper.jpg",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "bell pepper",
+                "image": "bell-pepper-orange.png",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "whole wheat crust",
+                "image": "pie-crust.jpg",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "diced roma tomato",
+                "image": "roma-tomatoes.png",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "shredded m zarella cheese",
+                "image": "cheddar-cheese.png",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "oz"
+                }
+            },
+            {
+                "name": "tomato sauce",
+                "image": "tomato-sauce-or-pasta-sauce.jpg",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "cooked turkey breast",
+                "image": "turkey-breast.jpg",
+                "amount": {
+                    "value": 0.5,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "white onion",
+                "image": "white-onion.png",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "servings"
+                }
+            }
+        ],
+        "Calories": 580.61,
+        "_id": "65f5fbf8786a4fc06f798853"
+    },
+    {
+        "_id": "65e88e91a06c7a0317a7f9fd",
+        "vegetarian": true,
+        "vegan": true,
+        "glutenFree": true,
+        "dairyFree": true,
+        "veryHealthy": true,
+        "readyInMinutes": 45,
+        "servings": 6,
+        "id": 794349,
+        "title": "Broccoli and Chickpea Rice Salad",
+        "image": "https://spoonacular.com/recipeImages/794349-312x231.jpg",
+        "analyzedInstructions": [
+            {
+                "steps": [
+                    {
+                        "step": "In a large skillet, heat the oil over medium heat.",
+                        "number": 1
+                    },
+                    {
+                        "step": "Add the broccoli, stir well, and cover. Cook, stirring often, until the broccoli is tender.",
+                        "number": 2
+                    },
+                    {
+                        "step": "Add the broccoli to a large bowl, along with the remaining salad ingredients.To make the dressing, whisk together all of the dressing ingredients in a small bowl.",
+                        "number": 3
+                    },
+                    {
+                        "step": "Pour the dressing over the salad and toss well to coat evenly. Taste for seasoning and serve.",
+                        "number": 4
+                    }
+                ]
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "almonds",
+                "image": "almonds.jpg",
+                "amount": {
+                    "value": 0.25,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "broccoli florets",
+                "image": "broccoli.jpg",
+                "amount": {
+                    "value": 4.0,
+                    "unit": "cups"
+                }
+            },
+            {
+                "name": "cooked dried brown rice",
+                "image": "rice-brown-cooked.png",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "cups"
+                }
+            },
+            {
+                "name": "dijon mustard",
+                "image": "dijon-mustard.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "Tbsps"
+                }
+            },
+            {
+                "name": "cooked dried chickpeas",
+                "image": "chickpeas.png",
+                "amount": {
+                    "value": 1.5,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "trimmed fresh parsley",
+                "image": "cilantro.png",
+                "amount": {
+                    "value": 0.25,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "garlic",
+                "image": "garlic.png",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "clove"
+                }
+            },
+            {
+                "name": "trimmed to 3 green onions",
+                "image": "spring-onions.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": ""
+                }
+            },
+            {
+                "name": "black fresh ground pepper",
+                "image": "pepper.jpg",
+                "amount": {
+                    "value": 6.0,
+                    "unit": "servings"
+                }
+            },
+            {
+                "name": "lemon (juice)",
+                "image": "lemon-juice.jpg",
+                "amount": {
+                    "value": 1.5,
+                    "unit": ""
+                }
+            },
+            {
+                "name": "olive oil",
+                "image": "olive-oil.jpg",
+                "amount": {
+                    "value": 1.0,
+                    "unit": "Tbsp"
+                }
+            },
+            {
+                "name": "olive oil",
+                "image": "olive-oil.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "2 tablespoons pineapple juice (juice from canned pineapple)",
+                "image": "pineapple-juice.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": ""
+                }
+            },
+            {
+                "name": "red pepper flakes",
+                "image": "red-pepper-flakes.jpg",
+                "amount": {
+                    "value": 0.5,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "sea salt",
+                "image": "salt.jpg",
+                "amount": {
+                    "value": 1.5,
+                    "unit": "tsps"
+                }
+            },
+            {
+                "name": "sun-dried tomatoes",
+                "image": "sundried-tomatoes.jpg",
+                "amount": {
+                    "value": 0.33333334,
+                    "unit": "cup"
+                }
+            },
+            {
+                "name": "tamari sauce",
+                "image": "soy-sauce.jpg",
+                "amount": {
+                    "value": 2.0,
+                    "unit": "tsps"
+                }
+            }
+        ],
+        "Calories": 354.93
+    }
+]

@@ -2,7 +2,8 @@ from fastapi import APIRouter, Depends, Body, HTTPException
 from pymongo import MongoClient
 import logging
 from app.services import spoonacular as spoonacular_service
-from app.services.recipe_processing import process_and_save_recipes, prepare_recipe_search_criteria, get_cached_recipe_by_id
+from app.database.db_utils import get_cached_recipe_by_id
+from app.services.recipe_processing import process_and_save_recipes, prepare_recipe_search_criteria
 from app.utils.validations import validate_diet, validate_type, validate_intolerances
 from app.models.recipe_models import ProcessRecipesCriteria
 from app.models.recipe_search import RecipeSearchRequest
@@ -202,7 +203,7 @@ async def get_recipe(recipe_id: int):
     return recipe
 
 @router.post("/recipes/search")
-async def search_recipes(request_body: RecipeSearchRequest):
+async def post_search_recipes(request_body: RecipeSearchRequest):
     ingredients = ",".join(request_body.ingredients)
     diet = "vegetarian" if request_body.Vegetarian else ""
     intolerances = "gluten" if request_body.Gluten_free else ""

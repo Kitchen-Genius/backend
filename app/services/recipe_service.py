@@ -1,4 +1,3 @@
-from typing import Tuple
 from app.services.recipe_processing import process_and_save_recipes
 from app.models.recipe_search_criteria import RecipeSearchCriteria
 

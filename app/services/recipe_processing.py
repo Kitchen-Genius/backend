@@ -1,7 +1,8 @@
 # recipe_processing.py
 from app.services.spoonacular import search_recipes, fetch_recipe_ingredients, fetch_recipe_nutrition
 from app.utils.file_utils import save_data_locally
-from app.database.db import saved_recipies
+from app.database.db_utils import cache_recipe, get_cached_recipe_by_id
+from app.utils.serialize_doc import serialize_recipe_document
 from typing import List, Dict
 
 
@@ -63,18 +64,20 @@ async def process_and_save_recipes(diet="", includeIngredients="", type="", into
     for recipe in recipes_data.get("results", []):
         recipe_id = recipe.get("id")
 
-        # cached_recipe = await get_cached_recipe(recipe_id)
-        # if cached_recipe:
-        #     # Use the cached recipe
-        #     processed_recipes.append(cached_recipe)
-        #     continue
+        cached_recipe = await get_cached_recipe_by_id(recipe_id)
+        if cached_recipe:
+            # Use the cached recipe
+            serialized_cached_recipe = serialize_recipe_document(cached_recipe)
+            processed_recipes.append(serialized_cached_recipe)
+            continue
         ingredients_data = await fetch_recipe_ingredients(recipe_id)
         nutrition_data = await fetch_recipe_nutrition(recipe_id)  # Fetch nutrition information
     
         # Process the recipe to include ingredients and calories
         processed_recipe = process_recipe({"results": [recipe]}, ingredients_data, nutrition_data)
-        # await cache_recipe(processed_recipe)
-        processed_recipes.append(processed_recipe)
+        await cache_recipe(processed_recipe)
+        serialized_processed_recipe = serialize_recipe_document(processed_recipe)
+        processed_recipes.append(serialized_processed_recipe)
     
     # Save the processed recipes locally
     save_data_locally(processed_recipes, f"{type}_processed_recipes.json")
@@ -116,46 +119,4 @@ def process_ingredients_to_us_measurements(ingredients):
 
     return processed_ingredients
 
-async def get_cached_recipe(recipe_id: int):
-    recipe = await saved_recipies.find_one({"id": recipe_id})
-    return serialize_recipe_document(recipe)
 
-def serialize_recipe_document(doc):
-    doc["_id"] = str(doc["_id"])  # Convert ObjectId to string
-    
-    # Process analyzedInstructions and ingredients to ensure they are in a serializable format
-    if "analyzedInstructions" in doc and isinstance(doc["analyzedInstructions"], list):
-        for instruction_set in doc["analyzedInstructions"]:
-            if "steps" in instruction_set:
-                instruction_set["steps"] = [
-                    {
-                        "step": step["step"],
-                        "number": step.get("number", "")
-                    } for step in instruction_set["steps"]
-                ]
-                
-    if "ingredients" in doc and isinstance(doc["ingredients"], list):
-        doc["ingredients"] = [
-            {
-                "name": ingredient["name"],
-                "image": ingredient.get("image", ""),
-                "amount": {
-                    "value": ingredient["amount"].get("value", ""),
-                    "unit": ingredient["amount"].get("unit", "")
-                }
-            } for ingredient in doc["ingredients"]
-        ]
-    
-    return doc
-
-
-async def cache_recipe(recipe_data):
-    await saved_recipies.insert_one(recipe_data)
-
-
-async def get_cached_recipe_by_id(recipe_id: int):
-    recipe = await saved_recipies.find_one({"id": recipe_id})
-    if recipe:
-        return serialize_recipe_document(recipe)
-    else:
-        return None
