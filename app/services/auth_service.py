@@ -1,7 +1,6 @@
 # app/services/auth_service.py
 
 from app.database.db import users
-from fastapi import HTTPException, status
 import bcrypt
 
 async def authenticate_user(email: str, password: str):
