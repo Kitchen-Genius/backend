@@ -1,7 +1,7 @@
 from .db import database
 
 async def update_user_favorites(user_id: int, recipe_id: int, like: bool):
-    user_collection = database.get_collection("users")  # Assuming the collection is named "users"
+    user_collection = database.get_collection("users") 
     user = await user_collection.find_one({"user_id": user_id})
     if not user:
         return False  # User not found
