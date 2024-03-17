@@ -16,12 +16,5 @@ async def fetch_and_cache_recipe(recipe_id: int):
     return recipe_info
 
 async def fetch_user_favorite_recipes(user_id: int):
-    favorite_recipes_ids = await get_user_favorites(user_id)
-    favorite_recipes_info = []
-
-    for recipe_id in favorite_recipes_ids:
-        # Assume get_user_favorites now returns just the IDs or update the logic accordingly
-        recipe_info = await fetch_recipe_information(recipe_id)
-        favorite_recipes_info.append(recipe_info)
-
+    favorite_recipes_info = await get_user_favorites(user_id)
     return favorite_recipes_info
