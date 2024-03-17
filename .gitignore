@@ -8,4 +8,4 @@ jsons.zip
 .vs
 */__pycache__/
 *.py[cod]
-*cpython-310.pyc
+*.cpython-310.pyc
