@@ -49,7 +49,7 @@ async def post_search_recipes(request_body: RecipeSearchRequest):
         logging.error(f"Failed to process and save recipes: {str(e)}")  # Log the error for debugging
         raise HTTPException(status_code=500, detail=str(e) or "An internal error occurred.")
     
-@router.post("/recipes/{recipe_id}")
+@router.post("/recipes/searchbyid")
 async def get_recipe_by_id(request: RecipeIDRequest):
     try:
         recipe = await fetch_and_cache_recipe(request.recipe_id)

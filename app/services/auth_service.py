@@ -1,6 +1,9 @@
 # app/services/auth_service.py
 
-from app.database.db import users
+from bson import Binary
+from app.database.db import users, database
+from passlib.context import CryptContext
+from app.models.user import UserSignUpRequest
 import bcrypt
 
 async def authenticate_user(email: str, password: str):
@@ -21,3 +24,35 @@ async def authenticate_user(email: str, password: str):
 async def get_user_by_email(email: str):
     user_doc = await users.find_one({"email": email})
     return user_doc  # You might want to serialize this document before returning
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+async def create_user(user_data: UserSignUpRequest):
+    # Check if the user already exists
+    existing_user = await database.users.find_one({"email": user_data.email})
+    if existing_user:
+        return {"message": "User already exists", "status_code": 400}
+
+    # Generate the new user_id by incrementing the largest existing user_id
+    max_user_doc = await database.users.find_one(sort=[("user_id", -1)])
+    new_user_id = 1 if max_user_doc is None else max_user_doc["user_id"] + 1
+
+    # Hash the password
+    hashed_password = bcrypt.hashpw(user_data.password.encode('utf-8'), bcrypt.gensalt())
+    
+    # Convert the hashed password to the binary format to match existing passwords
+    binary_hashed_password = Binary(hashed_password)
+
+    # Create the user document with an empty favorites list and hashed password
+    user_document = {
+        "user_id": new_user_id,
+        "name": user_data.name,
+        "email": user_data.email,
+        "password": binary_hashed_password,
+        "img_link": user_data.img_link,
+        "favorites": []
+    }
+    
+    await database.users.insert_one(user_document)
+
+    return {"message": "User created successfully", "user_id": new_user_id, "status_code": 200}
