@@ -86,7 +86,6 @@ async def fetch_recipe_nutrition(recipe_id: int):
     else:
         return {"error": "Failed to fetch recipe nutrition", "status_code": response.status_code}
 
-# In app/services/spoonacular.py
 async def fetch_recipe_information(recipe_id: int):
     API_KEY = os.getenv("SPOONACULAR_API_KEY")
     url = f"https://api.spoonacular.com/recipes/{recipe_id}/information?apiKey={API_KEY}&includeNutrition=false"

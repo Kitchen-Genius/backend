@@ -11,3 +11,6 @@ class RecipeCriteria(BaseModel):
 
 class ProcessRecipesCriteria(BaseModel):
     criteria: List[RecipeCriteria]
+
+class RecipeIDRequest(BaseModel):
+    recipe_id: int
