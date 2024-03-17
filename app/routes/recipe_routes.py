@@ -207,12 +207,14 @@ async def post_search_recipes(request_body: RecipeSearchRequest):
     ingredients = ",".join(request_body.ingredients)
     diet = "vegetarian" if request_body.Vegetarian else ""
     intolerances = "gluten" if request_body.Gluten_free else ""
+    cooking_time = request_body.CookingTime
 
     try:
         recipes = await process_and_save_recipes(
             diet=diet,
             includeIngredients=ingredients,
-            intolerances=intolerances
+            intolerances=intolerances,
+            maxReadyTime=cooking_time
         )
         return recipes
     except Exception as e:

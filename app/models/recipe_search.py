@@ -1,6 +1,6 @@
 # /app/models/recipe_search.py
 from typing import List
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class RecipeSearchRequest(BaseModel):
     veryHealthy: bool = False
@@ -13,3 +13,4 @@ class RecipeSearchRequest(BaseModel):
     breakfast: bool = False
     lunch: bool = False
     dinner: bool = False
+    CookingTime: int = Field(None, alias="CookingTime", description="Maximum cooking time in minutes")
