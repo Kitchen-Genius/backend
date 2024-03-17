@@ -6,3 +6,4 @@ jsons.zip
 /.idea
 .idea
 .vs
+*__pycache__
