@@ -3,8 +3,10 @@ import requests
 import os
 from dotenv import load_dotenv
 from app.utils.file_utils import save_data_locally
+from app.utils.serialize_doc import serialize_recipe_document
 from app.utils.validations import validate_params
-
+from app.database.db_utils import cache_recipe
+from fastapi import HTTPException
 
 load_dotenv()
 
@@ -84,3 +86,18 @@ async def fetch_recipe_nutrition(recipe_id: int):
         return response.json()
     else:
         return {"error": "Failed to fetch recipe nutrition", "status_code": response.status_code}
+
+async def fetch_recipe_information(recipe_id: int):
+    API_KEY = "your_spoonacular_api_key"
+    url = f"https://api.spoonacular.com/recipes/{recipe_id}/information?apiKey={API_KEY}&includeNutrition=false"
+    
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url)
+        if response.status_code == 200:
+            recipe_data = response.json()
+            # Process and cache the recipe
+            processed_recipe = serialize_recipe_document(recipe_data)
+            await cache_recipe(processed_recipe)
+            return processed_recipe
+        else:
+            raise HTTPException(status_code=404, detail="Recipe not found in Spoonacular API.")
