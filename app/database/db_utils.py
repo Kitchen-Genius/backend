@@ -1,11 +1,14 @@
 # /app/database/db_utils.py
 from .db import database
 from app.services.spoonacular import fetch_recipe_information
+from app.utils.serialize_doc import serialize_recipe_document
 from fastapi import HTTPException
 
 async def get_cached_recipe_by_id(recipe_id: int):
     recipe = await database.saved_recipes.find_one({"id": recipe_id})
-    return recipe
+    if recipe:
+        return serialize_recipe_document(recipe)
+    return None
 
 async def cache_recipe(recipe):
     existing_recipe = await get_cached_recipe_by_id(recipe['id'])
