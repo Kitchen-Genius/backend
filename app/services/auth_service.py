@@ -6,7 +6,10 @@ from passlib.context import CryptContext
 from app.models.user import UserSignUpRequest
 import bcrypt
 
+"""Handles authentication logic, user creation, and user retrieval"""
+
 async def authenticate_user(email: str, password: str):
+    """Validates user credentials against stored data"""
     user = await users.find_one({"email": email})
     if not user:
         return False
@@ -22,12 +25,14 @@ async def authenticate_user(email: str, password: str):
         return None
 
 async def get_user_by_email(email: str):
+    """Retrieves a user document from the database by email"""
     user_doc = await users.find_one({"email": email})
     return user_doc  # You might want to serialize this document before returning
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 async def create_user(user_data: UserSignUpRequest):
+    """Registers a new user, ensuring unique email addresses, hashing passwords, and assigning a new user_id"""
     # Check if the user already exists
     existing_user = await database.users.find_one({"email": user_data.email})
     if existing_user:

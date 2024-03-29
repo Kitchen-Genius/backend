@@ -4,18 +4,24 @@ from app.services.spoonacular import fetch_recipe_information
 from app.utils.serialize_doc import serialize_recipe_document
 from fastapi import HTTPException
 
+"""Contains utility functions to interact with the database, 
+such as fetching cached recipes, caching new recipes, and retrieving user favorites"""
+
 async def get_cached_recipe_by_id(recipe_id: int):
+    """Fetches a recipe by ID from the cached recipes collection and serializes it for response."""
     recipe = await database.saved_recipes.find_one({"id": recipe_id})
     if recipe:
         return serialize_recipe_document(recipe)
     return None
 
 async def cache_recipe(recipe):
+    """Caches a recipe document in the database if it doesn’t exist."""
     existing_recipe = await get_cached_recipe_by_id(recipe['id'])
     if not existing_recipe:
         await database.saved_recipes.insert_one(recipe)
 
 def extract_required_recipe_info(recipe_document):
+    """Extracts and returns only the necessary fields (id, title, image) from a recipe document."""
     return {
         "id": recipe_document["id"],
         "title": recipe_document.get("title", "No Title"),
@@ -23,6 +29,7 @@ def extract_required_recipe_info(recipe_document):
     }
 
 async def get_user_favorites(user_id: int):
+    """Retrieves a user's favorite recipes list, fetching recipe details from cache or Spoonacular API as needed."""
     user = await database.users.find_one({"user_id": user_id})
     if not user or "favorites" not in user:
         return []

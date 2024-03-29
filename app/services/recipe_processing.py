@@ -5,8 +5,10 @@ from app.database.db_utils import cache_recipe, get_cached_recipe_by_id
 from app.utils.serialize_doc import serialize_recipe_document
 from typing import List, Dict
 
+"""Processes recipe search criteria and recipes themselves, interfacing with Spoonacular API functions for recipe data."""
 
 def prepare_recipe_search_criteria(criteria_json: List[Dict]):
+    """Formats search criteria for API requests"""
     # Assuming criteria_json is a list of criteria, but we'll just use the first item for this example
     criteria = criteria_json[0] if criteria_json else {}
 
@@ -28,6 +30,7 @@ def prepare_recipe_search_criteria(criteria_json: List[Dict]):
     }
 
 def process_recipe(recipe_json, ingredients_json, nutrition_json):
+    """Combines recipe, ingredient, and nutrition information into a single, processed format."""
     # Assuming there's always at least one result
     recipe = recipe_json['results'][0] if recipe_json['results'] else {}
     
@@ -52,7 +55,9 @@ def process_recipe(recipe_json, ingredients_json, nutrition_json):
     
     return processed_recipe
 
-async def process_and_save_recipes(diet="", includeIngredients="", type="", intolerances="", instructionsRequired=True, number=5, addRecipeInformation=True, maxReadyTime=60):
+async def process_and_save_recipes(diet="", includeIngredients="", type="", intolerances="", 
+                                   instructionsRequired=True, number=5, addRecipeInformation=True, maxReadyTime=60):
+    """Orchestrates recipe searches, processing, and local saving based on search criteria."""
     # Fetch recipes based on criteria
     recipes_data = await search_recipes(diet, includeIngredients, type, intolerances, instructionsRequired, number, addRecipeInformation, maxReadyTime)
     

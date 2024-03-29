@@ -1,15 +1,12 @@
-from fastapi import APIRouter, Depends, Body, HTTPException
+from fastapi import APIRouter, HTTPException
 from pymongo import MongoClient
 import logging
-from app.services import spoonacular as spoonacular_service
-from app.database.db_utils import get_cached_recipe_by_id
-from app.services.recipe_processing import process_and_save_recipes, prepare_recipe_search_criteria
-from app.utils.validations import validate_diet, validate_type, validate_intolerances
-from app.models.recipe_models import ProcessRecipesCriteria, RecipeIDRequest
+from app.services.recipe_processing import process_and_save_recipes
+from app.models.recipe_models import RecipeIDRequest
 from app.models.recipe_search import RecipeSearchRequest
-from app.services.recipe_service import process_and_save_recipes
 from app.services.recipe_management import fetch_and_cache_recipe
 
+"""Contains endpoints for recipe searches and fetching recipe details by ID"""
 
 MONGODB_URI = "mongodb+srv://KGUser:jXH2M8loFrZjtSYR@cluster0.v1oaihv.mongodb.net/"
 DATABASE_NAME = "KitchenGenius"
@@ -32,6 +29,7 @@ class Item:
 
 @router.post("/recipes/search")
 async def post_search_recipes(request_body: RecipeSearchRequest):
+    """Searches for recipes based on criteria such as diet, ingredients, intolerances, and cooking time"""
     ingredients = ",".join(request_body.ingredients)
     diet = "vegetarian" if request_body.Vegetarian else ""
     intolerances = "gluten" if request_body.Gluten_free else ""
@@ -51,6 +49,7 @@ async def post_search_recipes(request_body: RecipeSearchRequest):
     
 @router.post("/recipes/searchbyid")
 async def get_recipe_by_id(request: RecipeIDRequest):
+    """Retrieves detailed information about a recipe by its ID, caching the data if not already present."""
     try:
         recipe = await fetch_and_cache_recipe(request.recipe_id)
         return recipe

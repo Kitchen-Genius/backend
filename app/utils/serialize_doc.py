@@ -1,5 +1,7 @@
 # /app/utils/serialize_doc.py
 
+"""Contains functions to convert MongoDB documents into JSON serializable Python dictionaries, 
+particularly focusing on handling special fields and nested structures"""
 
 def serialize_document(doc):
     """Convert MongoDB document to a JSON serializable Python dict."""
@@ -11,6 +13,9 @@ def serialize_document(doc):
     return doc
 
 def serialize_recipe_document(doc):
+    """Tailored for recipe documents, it not only converts ObjectId to a string but also 
+    processes the analyzedInstructions and ingredients fields to ensure they are in a 
+    format that's easily serializable and consumable by clients."""
     doc["_id"] = str(doc["_id"])  # Convert ObjectId to string
     
     # Process analyzedInstructions and ingredients to ensure they are in a serializable format

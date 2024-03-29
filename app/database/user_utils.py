@@ -1,6 +1,9 @@
 from .db import database
 
+"""Provides functions specifically for managing user-related data, such as updating a user's favorite recipes list"""
+
 async def update_user_favorites(user_id: int, recipe_id: int, like: bool):
+    """Adds or removes a recipe ID to/from a user's favorites list, based on the provided like boolean flag."""
     user_collection = database.get_collection("users") 
     user = await user_collection.find_one({"user_id": user_id})
     if not user:

@@ -4,6 +4,9 @@ load_dotenv()
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 
+"""Used unce to change the database structure of all users to a different one.
+Can be modified to change it again if needed."""
+
 print("Migrate users script started")
 
 MONGO_DETAILS = os.getenv("MONGO_DETAILS")
